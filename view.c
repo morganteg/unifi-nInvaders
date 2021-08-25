@@ -394,7 +394,7 @@ void titleScreenDisplay()
 	int x, y;
 	int i;
 	WINDOW *wTitleText;
-	WINDOW *wAliens;
+	WINDOW *wAliensLocal;
 	WINDOW *wStartText;
 	char ufo[4][6] = {"<o o>", "<oo >", "<o o>", "< oo>"};
 	char aliens[2][9][3+1] = {
@@ -415,11 +415,11 @@ void titleScreenDisplay()
 	waddstr(wTitleText, "/_//_/___/_//_/___/\\_,_/\\_,_/\\__/_/ /___/");
 
 	frame++;
-	wAliens = newpad(7, 11);
-	wclear(wAliens);
+	wAliensLocal = newpad(7, 11);
+	wclear(wAliensLocal);
 	snprintf(buffer, sizeof(buffer),"%s = 500", ufo[frame % 4]);
-	wattrset(wAliens, COLOR_PAIR(MAGENTA));
-	waddstr(wAliens, buffer);
+	wattrset(wAliensLocal, COLOR_PAIR(MAGENTA));
+	waddstr(wAliensLocal, buffer);
 	if ((frame = frame % 60) == 0) {
 		alien_type = 0;
 	} else if (frame == 20) {
@@ -428,10 +428,10 @@ void titleScreenDisplay()
 		alien_type = 6;
 	}
 	for (i = alien_type; i < alien_type + 3; i++) {
-		waddstr(wAliens, "           ");
+		waddstr(wAliensLocal, "           ");
 		snprintf(buffer, sizeof(buffer), "%s   = %d", aliens[frame % 2][i], score[i % 3]);
-		wattrset(wAliens, COLOR_PAIR(colors[i]));
-		waddstr(wAliens, buffer);
+		wattrset(wAliensLocal, COLOR_PAIR(colors[i]));
+		waddstr(wAliensLocal, buffer);
 	}
 
 	wStartText = newpad(1, 20);
@@ -445,7 +445,7 @@ void titleScreenDisplay()
 
 	x = (SCREENWIDTH / 2) - (11 / 2);
 	y = 8;
-	copywin(wAliens, wTitleScreen, 0, 0, y, x , y + 6, x + 10, 0);
+	copywin(wAliensLocal, wTitleScreen, 0, 0, y, x , y + 6, x + 10, 0);
 
 	x = (SCREENWIDTH / 2) - (20 / 2);
 	y = SCREENHEIGHT - 2;
@@ -545,7 +545,7 @@ void refreshScreen()
 /**
  * do proper cleanup
  */
-static void finish(int sig)
+static void finish()
 {
 	endwin();	// <curses.h> reset terminal into proper non-visual mode
 	exit(0);

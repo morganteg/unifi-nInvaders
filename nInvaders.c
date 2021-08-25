@@ -90,7 +90,7 @@ static void evaluateCommandLine(int argc, char **argv)
 }
 
 
-static void finish(int sig)
+static void finish()
 {
   endwin();
   showGplShort();

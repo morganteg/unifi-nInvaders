@@ -1,4 +1,16 @@
 {
     "FalsePositives": [
+        {
+            "baseLineIgnore": "0",
+            "checkName": "Published Standards\\MISRA C 2012\\21.10 The Standard Library time and date functions shall not be used",
+            "entityName": "@l/usr/include/stdio.h",
+            "fileName": "/home/gabriele/projects/unifi-nInvaders/nInvaders.c",
+            "noteString": "",
+            "overrideString": "",
+            "violationCheckID": "MISRA12_21.10",
+            "violationID": "time.h used ",
+            "violationLines": "",
+            "violationText": "time.h used "
+        }
     ]
 }

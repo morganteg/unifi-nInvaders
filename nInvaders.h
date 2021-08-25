@@ -32,9 +32,6 @@
 #define NINVADERS
 
 #define UFO_ALIEN_TYPE   0
-#define RED_ALIEN_TYPE   1
-#define GREEN_ALIEN_TYPE 2
-#define BLUE_ALIEN_TYPE  3 
 
 int main(int argv, char **argc);	// hey! it has to start somewhere!
 

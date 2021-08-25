@@ -67,7 +67,7 @@ void aliensReset()
 		alienshotx[i] = 0;  // start with zero values
 		alienshoty[i] = 0;  // start with zero values
 	}
-	alienshotnum = 1;	    // one missile at the same time
+	int alienshotnum = 1;	    // one missile at the same time
 	alienshotx[0] = 5;	    // x position of first alienshot
 	alienshoty[0] = 1;	    // y position of first alienshot
 
