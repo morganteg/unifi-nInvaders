@@ -65,13 +65,6 @@ int bunkersHitCheck(int shotx, int shoty);
 
 	
 // methods that handle graphic display, from view.c
-extern void aliensDisplay(int x, int y, int wid, int hgt);
-extern void aliensClear(int x, int y, int wid, int hgt);
-extern void aliensRefresh(int level, int *pAliens);
-extern void aliensMissileDisplay(int x, int y);
-extern void aliensMissileClear(int x, int y);
-extern void bunkersClearElement(int x, int y);
-extern void bunkersClear(void);
 extern void bunkersRefresh(void);
 	
 #endif

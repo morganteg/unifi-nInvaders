@@ -34,8 +34,6 @@
 #define UFO_ALIEN_TYPE   0
 
 int main(int argv, char **argc);	// hey! it has to start somewhere!
-
-extern void render(void);
 	
 void game_over(int a);
 static void drawscore(void);
@@ -47,12 +45,5 @@ void doScoring(int alienType);
 int weite;
 int level;
 int skill_level;
-	
-// included from globals.h
-extern void doSleep(int microseconds);
-extern void showUsage(void);
-extern void showVersion(void);
-extern void showGplShort(void);
-extern void showGpl(void);
 
 #endif

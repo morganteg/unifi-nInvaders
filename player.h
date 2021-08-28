@@ -41,15 +41,7 @@ void playerExplode(void);
 	
 // methods that handle graphic display, from view.c
 extern void playerInit(void);
-extern void playerDisplay(int x, int y);
-extern void playerClear(int x, int y);
 extern void playerMissileInit(void);
-extern void playerMissileDisplay(int x, int y);
-extern void playerMissileClear(int x, int y);
-extern void playerExplosionDisplay(int x, int y);
-extern void bunkersClearElement(int x, int y);
-
-extern void doScoring(int alienType);
 	
 #endif
 

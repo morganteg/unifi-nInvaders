@@ -149,49 +149,6 @@ int aliensMove(void)
 	return fReachedPlayer;				  // return if aliens reached player
 }
 
-
-/**
- * display alien animation, display remaining parts of aliens and bunker 
- */
-void render(void)
-{
-	int k,row;
-	int c=0;
-
-	// calculate left, right, bottom, lowest_ship	
-	aliens.left=1;
-	aliens.right=-1;
-	aliens.bottom=-1;
-	shipnum=0;
-	for (k=0;k<11;k++) {
-		lowest_ship[k]=-1;
-	}
-	
-	for (row=0;row<ALIENS_MAX_NUMBER_Y*2;row++) {
-		if ((row%2)==0){
-			for (k=0;k<ALIENS_MAX_NUMBER_X;k++) {
-				if (alienBlock[c][k] != 0) {
-					lowest_ship[k]=row;
-					shipnum++;
-					if (aliens.left==1 || -k>aliens.left) {aliens.left=-k;}
-					if (aliens.right==-1 || k>aliens.right) {aliens.right=k;}
-					if (aliens.bottom==-1 || c>aliens.bottom) {aliens.bottom=c;}
-				} 
-			}
-		} else {
-			c++;
-		}
-	}
-	aliens.bottom=aliens.bottom*2;	// every 2nd row is an empty row
-	aliens.left=aliens.left*3; // alien sprite is 3 chars wide
-	aliens.right=aliens.right*3; // alien sprite is 3 chars wide
-	
-	// display remaining aliens with animation
-	aliensRefresh(level, &alienBlock[0][0]);
-
-}
-
-
 /**
  * move aliens' missiles and do player/bunker hit testing
  * a zero value in alienshotx indicates that the appropriate missile is loaded, but not fired
