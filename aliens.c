@@ -29,7 +29,7 @@
 /**
  * initialize aliens attributes
  */
-void aliensReset()
+void aliensReset(void)
 {
 	int i,j;
 	
@@ -76,7 +76,7 @@ void aliensReset()
 /**
  * initialize bunkers attributes
  */
-void bunkersReset()
+void bunkersReset(void)
 {
 	int a, b;
 
@@ -109,7 +109,7 @@ void bunkersReset()
  * move aliens and test if they've reached the
  * bottom of the windows or the bunkers.
  */
-int aliensMove()
+int aliensMove(void)
 {
 	
 	int cx,cy;
@@ -153,7 +153,7 @@ int aliensMove()
 /**
  * display alien animation, display remaining parts of aliens and bunker 
  */
-void render()
+void render(void)
 {
 	int k,row;
 	int c=0;
@@ -196,7 +196,7 @@ void render()
  * move aliens' missiles and do player/bunker hit testing
  * a zero value in alienshotx indicates that the appropriate missile is loaded, but not fired
  */
-int aliensMissileMove()
+int aliensMissileMove(void)
 {
 	int i, tmp;
 	int fPlayerWasHit = 0;

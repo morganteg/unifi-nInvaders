@@ -38,12 +38,12 @@ struct Player {
 	int missileY;	  // vertical position of missile
 };
        
-Player player;
+extern Player player;
 
 /**
  * initialize player attributes
  */
-void playerReset()
+void playerReset(void)
 {
 	// if missile was fired clear that position
 	if (player.missileFired == 1) {	
@@ -77,7 +77,7 @@ static void playerMove(int newPosX)
 /**
  * move player left
  */
-void playerMoveLeft()
+void playerMoveLeft(void)
 {
 	// check if space between player and border of screen is big enough 
 	if (player.posX > 0 + player.speed) {
@@ -93,7 +93,7 @@ void playerMoveLeft()
 /**
  * move player right
  */
-void playerMoveRight()
+void playerMoveRight(void)
 {
 	// check if space between player and border of screen is big enough 
 	if (player.posX < SCREENWIDTH - PLAYERWIDTH - player.speed) {
@@ -109,7 +109,7 @@ void playerMoveRight()
 /**
  * toggle turbo mode on (if key is kept pressed)
  */
-void playerTurboOn()
+void playerTurboOn(void)
 {
 	player.speed = 2;
 }
@@ -118,7 +118,7 @@ void playerTurboOn()
 /**
  * toggle turbo mode off (if key is kept pressed)
  */
-void playerTurboOff()
+void playerTurboOff(void)
 {
 	player.speed = 1;
 }
@@ -146,7 +146,7 @@ int playerHitCheck(int hostileShotX, int hostileShotY)
 /**
  * Launch Missile
  */
-void playerLaunchMissile()
+void playerLaunchMissile(void)
 {
 	// only launch missile if no other is on its way
 	if (player.missileFired == 0) {
@@ -160,7 +160,7 @@ void playerLaunchMissile()
 /**
  * Reload Missile
  */
-static void playerReloadMissile()
+static void playerReloadMissile(void)
 {
 	player.missileFired = 0;	// no player missile flying
 }
@@ -170,7 +170,7 @@ static void playerReloadMissile()
  * move player missile and do alien/bunker hit testing
  * return value - 0: still some aliens left, 1: no aliens left
  */
-int playerMoveMissile()
+int playerMoveMissile(void)
 {
 	int fNoAliensLeft = 0;	// return value
 	int alienTypeHit = 0;
@@ -234,7 +234,7 @@ int playerMoveMissile()
 /** 
  * let player explode
  */
-void playerExplode(){
+void playerExplode(void){
 	playerExplosionDisplay(player.posX, player.posY);
 	playerDisplay(player.posX, player.posY);
 }

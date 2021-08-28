@@ -32,9 +32,9 @@
 
 #define FPS 50
 
-int lives;
-long score;
-int status; // status handled in timer
+static int lives;
+static long score;
+static int status; // status handled in timer
 
 #define GAME_LOOP 1
 #define GAME_NEXTLEVEL 2
@@ -49,7 +49,7 @@ int status; // status handled in timer
 /**
  * initialize level: reset attributes of most units
  */
-static void initLevel()
+static void initLevel(void)
 {
   playerReset();
   aliensReset();
@@ -90,42 +90,42 @@ static void evaluateCommandLine(int argc, char **argv)
 }
 
 
-static void finish()
+static void finish(int arg)
 {
-  endwin();
-  showGplShort();
+  (void)endwin();
+  (void)showGplShort();
   
-  fprintf(stderr,"\n");
-  fprintf(stderr,"\n");
-  fprintf(stderr,"=========================================================================\n");
-  fprintf(stderr,"\n");
+  (void)fprintf(stderr,"\n");
+  (void)fprintf(stderr,"\n");
+  (void)fprintf(stderr,"=========================================================================\n");
+  (void)fprintf(stderr,"\n");
   
-  fprintf(stderr,"Final score: %7.7ld, Final level: %2.2d\nFinal rating... ",score,level);
+  (void)fprintf(stderr,"Final score: %7.7ld, Final level: %2.2d\nFinal rating... ",score,level);
   if (lives>0)
-    fprintf(stderr,"Quitter\n\n");
+    (void)fprintf(stderr,"Quitter\n\n");
   else if(score<5000)
-    fprintf(stderr,"Alien Fodder\n\n");
+    (void)fprintf(stderr,"Alien Fodder\n\n");
   else if(score<7500)
-    fprintf(stderr,"Easy Target\n\n");
+    (void)fprintf(stderr,"Easy Target\n\n");
   else if(score<10000)
-    fprintf(stderr,"Barely Mediocre\n\n");
+    (void)fprintf(stderr,"Barely Mediocre\n\n");
   else if(score<12500)
-    fprintf(stderr,"Shows Promise\n\n");
+    (void)fprintf(stderr,"Shows Promise\n\n");
   else if(score<15000)
-    fprintf(stderr,"Alien Blaster\n\n");
+    (void)fprintf(stderr,"Alien Blaster\n\n");
   else if(score<20000)
-    fprintf(stderr,"Earth Defender\n\n");
+    (void)fprintf(stderr,"Earth Defender\n\n");
   else if(score>19999)
-    fprintf(stderr,"Supreme Protector\n\n");
+    (void)fprintf(stderr,"Supreme Protector\n\n");
   else
-    fprintf(stderr, "Error");
+    (void)fprintf(stderr, "Error");
   
-  showVersion();
+  (void)showVersion();
   exit(0);
 }
 
 
-void drawscore()
+static void drawscore(void)
 {
   statusDisplay(level, score, lives);
 }
@@ -134,7 +134,7 @@ void drawscore()
 /**
  * reads input from keyboard and do action
  */
-void readInput()
+static void readInput(void)
 {
   int ch;
   static int lastmove;
@@ -161,7 +161,7 @@ void readInput()
       } else if (ch == 'q') {	// quit game
         status = GAME_EXIT;
       } else {
-        fprintf(stderr, "Error");
+        (void)fprintf(stderr, "Error");
       }
       break;
 
@@ -212,7 +212,7 @@ void readInput()
  * timer
  * this method is executed every 1 / FPS seconds  
  */
-void handleTimer()
+static void handleTimer(void)
 {
   static int aliens_move_counter = 0; 
   static int aliens_shot_counter = 0;
@@ -319,7 +319,7 @@ void handleTimer()
 /**
  * set up timer
  */
-void setUpTimer()
+static void setUpTimer(void)
 {
   struct itimerval myTimer;
   struct sigaction myAction;
@@ -327,11 +327,11 @@ void setUpTimer()
   myTimer.it_value.tv_usec = 1000000 / FPS;
   myTimer.it_interval.tv_sec = 0;
   myTimer.it_interval.tv_usec = 1000000 / FPS;
-  setitimer(ITIMER_REAL, &myTimer, NULL);
+  (void)setitimer(ITIMER_REAL, &myTimer, NULL);
   
   myAction.sa_handler = &handleTimer;
   myAction.sa_flags = SA_RESTART;
-  sigaction(SIGALRM, &myAction, NULL);
+  (void)sigaction(SIGALRM, &myAction, NULL);
 }
 
 

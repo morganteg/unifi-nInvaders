@@ -31,7 +31,7 @@ static int fShowUfo = 0;
 /**
  * initialize ufo attributes
  */
-void ufoReset()
+void ufoReset(void)
 {
 	ufoClear(ufo.posX, ufo.posY);	// clear old position of player
 
@@ -55,7 +55,7 @@ static void ufoMove(int posX)
 /**
  * move ufo and check if it reached the left screen border
  */
-void ufoMoveLeft()
+void ufoMoveLeft(void)
 {
 	// check if space between ufo and screen border is big enough 
 	if (ufo.posX > 1) {
@@ -70,7 +70,7 @@ void ufoMoveLeft()
  * check if the first screen line is free for the ufo and
  * display it randomly
  */
-int ufoShowUfo()
+int ufoShowUfo(void)
 {
 	if (aliens.posY > 0 && fShowUfo == 0) { // aliens one line down
 		if ((random() % 200) == 0) {

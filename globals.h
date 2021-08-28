@@ -25,11 +25,11 @@
 #ifndef GLOBALS
 #define GLOBALS
 
-extern void doSleep();
+extern void doSleep(int microseconds);
 	
-extern void showUsage();
-extern void showVersion();
-extern void showGplShort();
-extern void showGpl();
+extern void showUsage(void);
+extern void showVersion(void);
+extern void showGplShort(void);
+extern void showGpl(void);
 	
 #endif

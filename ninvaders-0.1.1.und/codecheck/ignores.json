@@ -11,6 +11,18 @@
             "violationID": "time.h used ",
             "violationLines": "",
             "violationText": "time.h used "
+        },
+        {
+            "baseLineIgnore": "0",
+            "checkName": "Published Standards\\MISRA C 2012\\21.6 The Standard Library input/output functions shall not be used",
+            "entityName": "@lfprintf@kfprintf",
+            "fileName": "/home/gabriele/projects/unifi-nInvaders/globals.c",
+            "noteString": "",
+            "overrideString": "",
+            "violationCheckID": "MISRA12_21.6",
+            "violationID": "stdio.h input/output function %2 used in file %1",
+            "violationLines": "",
+            "violationText": "stdio.h input/output function fprintf used in file globals.c"
         }
     ]
 }

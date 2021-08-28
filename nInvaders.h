@@ -38,7 +38,8 @@ int main(int argv, char **argc);	// hey! it has to start somewhere!
 extern void render(void);
 	
 void game_over(int a);
-void drawscore();
+static void drawscore(void);
+static void readInput(void);
 		
 void doScoring(int alienType);
 
@@ -48,10 +49,10 @@ int level;
 int skill_level;
 	
 // included from globals.h
-extern void doSleep();
-extern void showUsage();
-extern void showVersion();
-extern void showGplShort();
-extern void showGpl();
+extern void doSleep(int microseconds);
+extern void showUsage(void);
+extern void showVersion(void);
+extern void showGplShort(void);
+extern void showGpl(void);
 
 #endif

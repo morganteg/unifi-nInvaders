@@ -28,22 +28,22 @@
 #include "view.h"
 
 
-void playerReset();
+void playerReset(void);
 	
-void playerMoveLeft();
-void playerMoveRight();
-void playerTurboOn();
-void playerTurboOff();
+void playerMoveLeft(void);
+void playerMoveRight(void);
+void playerTurboOn(void);
+void playerTurboOff(void);
 int playerHitCheck(int hostileShotX, int hostileShotY);
-void playerLaunchMissile();
-int playerMoveMissile();
-void playerExplode();
+void playerLaunchMissile(void);
+int playerMoveMissile(void);
+void playerExplode(void);
 	
 // methods that handle graphic display, from view.c
-extern void playerInit();
+extern void playerInit(void);
 extern void playerDisplay(int x, int y);
 extern void playerClear(int x, int y);
-extern void playerMissileInit();
+extern void playerMissileInit(void);
 extern void playerMissileDisplay(int x, int y);
 extern void playerMissileClear(int x, int y);
 extern void playerExplosionDisplay(int x, int y);

@@ -34,16 +34,16 @@ struct Ufo {
 	int posY;	  // vertical position of aliens
 };
 	
-Ufo ufo;
+extern Ufo ufo;
 
-void ufoReset();
-int ufoShowUfo();
-void ufoMoveLeft();
+void ufoReset(void);
+int ufoShowUfo(void);
+void ufoMoveLeft(void);
 int ufoHitCheck(int shotX, int shotY);
 	
 // methods that handle graphic display, from view.c
 extern void ufoDisplay(int x, int y);
-extern void ufoRefresh();
+extern void ufoRefresh(void);
 extern void ufoClear(int x, int y);
 
 #endif

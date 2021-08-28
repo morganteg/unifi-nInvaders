@@ -47,19 +47,19 @@ int shipnum;
 #define ALIENS_MAX_MISSILES 10	
 
 // todo: move to structure
-int lowest_ship[ALIENS_MAX_NUMBER_X];
-int alienshotx[ALIENS_MAX_MISSILES];
-int alienshoty[ALIENS_MAX_MISSILES];
-int alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
+extern int lowest_ship[ALIENS_MAX_NUMBER_X];
+extern int alienshotx[ALIENS_MAX_MISSILES];
+extern int alienshoty[ALIENS_MAX_MISSILES];
+extern int alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
 
-int bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
+extern int bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
 
 
-void aliensReset();
-void bunkersReset();	
-int aliensMove();
-int aliensMissileMove();
-void render();
+void aliensReset(void);
+void bunkersReset(void);	
+int aliensMove(void);
+int aliensMissileMove(void);
+void render(void);
 int aliensHitCheck(int shotx, int shoty);
 int bunkersHitCheck(int shotx, int shoty);
 
@@ -71,7 +71,7 @@ extern void aliensRefresh(int level, int *pAliens);
 extern void aliensMissileDisplay(int x, int y);
 extern void aliensMissileClear(int x, int y);
 extern void bunkersClearElement(int x, int y);
-extern void bunkersClear();
-extern void bunkersRefresh();
+extern void bunkersClear(void);
+extern void bunkersRefresh(void);
 	
 #endif
