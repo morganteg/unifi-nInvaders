@@ -13,32 +13,43 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * aint64_t with this program; if not, write to the Free Software
+ * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
  
 
-#ifndef MACRO_PLAYER
-#define MACRO_PLAYER
+#ifndef PLAYER
+#define PLAYER
 
 #include "view.h"
-#include <stdint.h>
 
 
-void playerReset(void);
+void playerReset();
 	
-void playerMoveLeft(void);
-void playerMoveRight(void);
-void playerTurboOn(void);
-void playerTurboOff(void);
-int32_t playerHitCheck(int32_t hostileShotX, int32_t hostileShotY);
-void playerLaunchMissile(void);
-int32_t playerMoveMissile(void);
-void playerExplode(void);
+void playerMoveLeft();
+void playerMoveRight();
+void playerTurboOn();
+void playerTurboOff();
+int playerHitCheck(int hostileShotX, int hostileShotY);
+void playerLaunchMissile();
+int playerMoveMissile();
+void playerExplode();
+	
+// methods that handle graphic display, from view.c
+extern void playerInit();
+extern void playerDisplay(int x, int y);
+extern void playerClear(int x, int y);
+extern void playerMissileInit();
+extern void playerMissileDisplay(int x, int y);
+extern void playerMissileClear(int x, int y);
+extern void playerExplosionDisplay(int x, int y);
+extern void bunkersClearElement(int x, int y);
+
+extern void doScoring(int alienType);
 	
 #endif
 

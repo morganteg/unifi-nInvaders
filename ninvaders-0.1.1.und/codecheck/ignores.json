@@ -86,18 +86,6 @@
         },
         {
             "baseLineIgnore": "0",
-            "checkName": "Published Standards\\MISRA C 2012\\Directive 4.6 typedefs that indicate size and signedness should be used in place of the basic numerical types",
-            "entityName": "@lgetch@kgetch",
-            "fileName": "/home/gabriele/projects/unifi-nInvaders/nInvaders.c",
-            "noteString": "",
-            "overrideString": "",
-            "violationCheckID": "MISRA12_4.6",
-            "violationID": "Violation: basic numerical type \"%1\" used.",
-            "violationLines": "",
-            "violationText": "Violation: basic numerical type \"int\" used."
-        },
-        {
-            "baseLineIgnore": "0",
             "checkName": "Published Standards\\MISRA C 2012\\21.10 The Standard Library time and date functions shall not be used",
             "entityName": "@l/usr/include/signal.h",
             "fileName": "/home/gabriele/projects/unifi-nInvaders/nInvaders.c",
@@ -155,18 +143,6 @@
             "violationID": "Keyword \"void\" not used to denote empty parameter list for function %1",
             "violationLines": "",
             "violationText": "Keyword \"void\" not used to denote empty parameter list for function endwin"
-        },
-        {
-            "baseLineIgnore": "0",
-            "checkName": "Published Standards\\MISRA C 2012\\8.2 Function types shall be in prototype form with named parameters",
-            "entityName": "@lgetch@kgetch",
-            "fileName": "/home/gabriele/projects/unifi-nInvaders/nInvaders.c",
-            "noteString": "",
-            "overrideString": "",
-            "violationCheckID": "MISRA12_8.2",
-            "violationID": "Keyword \"void\" not used to denote empty parameter list for function %1",
-            "violationLines": "",
-            "violationText": "Keyword \"void\" not used to denote empty parameter list for function getch"
         }
     ]
 }

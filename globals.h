@@ -16,21 +16,20 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
 
+
 #ifndef GLOBALS
 #define GLOBALS
 
-#include <stdint.h>
-
-extern void doSleep(int32_t microseconds);
+extern void doSleep();
 	
-extern void showUsage(void);
-extern void showVersion(void);
-extern void showGplShort(void);
-extern void showGpl(void);
+extern void showUsage();
+extern void showVersion();
+extern void showGplShort();
+extern void showGpl();
 	
 #endif

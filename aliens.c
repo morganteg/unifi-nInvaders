@@ -16,26 +16,25 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
 
-#include "view.h"
+ 
 #include "aliens.h"
 #include "player.h"
 #include "nInvaders.h"
-#include <stdlib.h>
 
 /**
  * initialize aliens attributes
  */
-void aliensReset(void)
+void aliensReset()
 {
-	int32_t  i,j;
+	int i,j;
 	
 	// three different types of aliens [5], [10]
-	int32_t alienLevel[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X]={
+	int level[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X]={
 		{1,1,1,1,1,1,1,1,1,1},
 		{2,2,2,2,2,2,2,2,2,2},
 		{2,2,2,2,2,2,2,2,2,2},
@@ -56,7 +55,7 @@ void aliensReset(void)
 	// copy level-array to enemy-array 
 	for (i=0;i<ALIENS_MAX_NUMBER_X;i++) {
 		for (j=0;j<ALIENS_MAX_NUMBER_Y;j++) {
-			alienBlock[j][i]=alienLevel[j][i];
+			alienBlock[j][i]=level[j][i];
 		}
 	}
 	
@@ -68,7 +67,7 @@ void aliensReset(void)
 		alienshotx[i] = 0;  // start with zero values
 		alienshoty[i] = 0;  // start with zero values
 	}
-	int32_t alienshotnum = 1;	    // one missile at the same time
+	alienshotnum = 1;	    // one missile at the same time
 	alienshotx[0] = 5;	    // x position of first alienshot
 	alienshoty[0] = 1;	    // y position of first alienshot
 
@@ -77,13 +76,13 @@ void aliensReset(void)
 /**
  * initialize bunkers attributes
  */
-void bunkersReset(void)
+void bunkersReset()
 {
-	int32_t a, b;
+	int a, b;
 
-	// set position of bunker sprites. user graphical int8_t bunkerd for better visual overview
+	// set position of bunker sprites. user graphical char bunkerd for better visual overview
 	// and set according to this the bunker-array
-	int8_t bunkerd[BUNKERHEIGHT][BUNKERWIDTH+1] = {
+	char bunkerd[BUNKERHEIGHT][BUNKERWIDTH+1] = {
 		"        ###                 ###                 ###                 ###         ",
 		"       #####               #####               #####               #####        ",
 		"      #######             #######             #######             #######       ",
@@ -95,11 +94,10 @@ void bunkersReset(void)
 	// copy graphical "bunkerd" to binary "bunker"
 	for (a = 0; a < BUNKERWIDTH; a++) {
 		for (b = 0; b < BUNKERHEIGHT; b++) {
-                  if (bunkerd[b][a] == '#') {
+			if (bunkerd[b][a] == '#')
 				bunker[b][a] = 1;
-                  }else{
+			else
 				bunker[b][a] = 0;
-                  }
 		}
 	}
 	
@@ -111,12 +109,13 @@ void bunkersReset(void)
  * move aliens and test if they've reached the
  * bottom of the windows or the bunkers.
  */
-int32_t aliensMove(void)
+int aliensMove()
 {
 	
-	int32_t cx,cy;
-	int32_t fReachedPlayer=0; 				// return value
+	int cx,cy;
+	int fReachedPlayer=0; 				// return value
 
+	render();	
 	aliensClear(aliens.posX, aliens.posY, aliens.right, aliens.bottom);	// clear old position of aliens
 
 	aliens.posX = aliens.posX + aliens.speed;			// move aliens left/ right
@@ -150,16 +149,59 @@ int32_t aliensMove(void)
 	return fReachedPlayer;				  // return if aliens reached player
 }
 
+
+/**
+ * display alien animation, display remaining parts of aliens and bunker 
+ */
+void render()
+{
+	int k,row;
+	int c=0;
+
+	// calculate left, right, bottom, lowest_ship	
+	aliens.left=1;
+	aliens.right=-1;
+	aliens.bottom=-1;
+	shipnum=0;
+	for (k=0;k<11;k++) {
+		lowest_ship[k]=-1;
+	}
+	
+	for (row=0;row<ALIENS_MAX_NUMBER_Y*2;row++) {
+		if ((row%2)==0){
+			for (k=0;k<ALIENS_MAX_NUMBER_X;k++) {
+				if (alienBlock[c][k] != 0) {
+					lowest_ship[k]=row;
+					shipnum++;
+					if (aliens.left==1 || -k>aliens.left) {aliens.left=-k;}
+					if (aliens.right==-1 || k>aliens.right) {aliens.right=k;}
+					if (aliens.bottom==-1 || c>aliens.bottom) {aliens.bottom=c;}
+				} 
+			}
+		} else {
+			c++;
+		}
+	}
+	aliens.bottom=aliens.bottom*2;	// every 2nd row is an empty row
+	aliens.left=aliens.left*3; // alien sprite is 3 chars wide
+	aliens.right=aliens.right*3; // alien sprite is 3 chars wide
+	
+	// display remaining aliens with animation
+	aliensRefresh(level, &alienBlock[0][0]);
+
+}
+
+
 /**
  * move aliens' missiles and do player/bunker hit testing
  * a zero value in alienshotx indicates that the appropriate missile is loaded, but not fired
  */
-int32_t aliensMissileMove(void)
+int aliensMissileMove()
 {
-	int32_t i, tmp;
-	int32_t fPlayerWasHit = 0;
-	int32_t shootThreshold;
-	static int32_t alienshot_counter = 0;
+	int i, tmp;
+	int fPlayerWasHit = 0;
+	int shootThreshold;
+	static int alienshot_counter = 0;
 
 	
 	// calculate threshold when next missile should be fired
@@ -194,9 +236,9 @@ int32_t aliensMissileMove(void)
 			// start new missile if counter says so
 			if (alienshot_counter > shootThreshold && shipnum > 0) {// only shot if there's an alien left
 				alienshot_counter = 0;				// reset counter				
-				tmp = rand() % ALIENS_MAX_NUMBER_X;  		// randomly select one of the ...
+				tmp = random() % ALIENS_MAX_NUMBER_X;  		// randomly select one of the ...
 				while (lowest_ship[tmp] == -1) {		// ...aliens at the bottom of ...
-					tmp = rand() % ALIENS_MAX_NUMBER_X;	// ...a column to launch missile
+					tmp = random() % ALIENS_MAX_NUMBER_X;	// ...a column to launch missile
 				}
 				alienshoty[i]=aliens.posY+lowest_ship[tmp];		// set y position of missile
 				alienshotx[i]=aliens.posX+tmp*3;			// set x position of missile
@@ -224,10 +266,10 @@ int32_t aliensMissileMove(void)
 /**
  * check if missile hit an alien
  */
-int32_t aliensHitCheck(int32_t shotx, int32_t shoty)
+int aliensHitCheck(int shotx, int shoty)
 {
-	int32_t alienType = 0;
-	int32_t shipx, shipy;
+	int alienType = 0;
+	int shipx, shipy;
 	// if missile is within alien-rectangle 
 	if (shotx >= aliens.posX && shotx <= aliens.posX + ALIENS_MAX_NUMBER_X * 3 - 1
 	    && shoty >= aliens.posY && shoty <= aliens.posY + (ALIENS_MAX_NUMBER_Y - 1) * 2) {
@@ -246,10 +288,10 @@ int32_t aliensHitCheck(int32_t shotx, int32_t shoty)
 /**
  * check if missile hit an element of bunker
  */
-int32_t bunkersHitCheck(int32_t shotx, int32_t shoty)
+int bunkersHitCheck(int shotx, int shoty)
 {
-	int32_t adjx, adjy;
-	int32_t fBunkerWasHit = 0;
+	int adjx, adjy;
+	int fBunkerWasHit = 0;
 	// if missile is within bunker-rectangle
 	if (shotx >= BUNKERX && shotx < BUNKERX + BUNKERWIDTH
 	    && shoty >= BUNKERY && shoty < BUNKERY + BUNKERHEIGHT) {

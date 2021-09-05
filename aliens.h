@@ -16,46 +16,63 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
+ 
+ 
+#include "view.h"
 
+#ifndef ALIENS
+#define ALIENS
 
-#ifndef MACRO_ALIENS
-#define MACRO_ALIENS
+typedef struct Aliens Aliens;
 	
-extern struct AliensStruct {
-	int32_t posX;	  // horizontal position of aliens
-	int32_t posY;	  // vertical position of aliens
-	int32_t right;
-	int32_t left;
-	int32_t bottom;
-	int32_t speed;	  // 0: no movement; 1: one per turn; etc.
+struct Aliens {
+	int posX;	  // horizontal position of aliens
+	int posY;	  // vertical position of aliens
+	int right;
+	int left;
+	int bottom;
+	int speed;	  // 0: no movement; 1: one per turn; etc.
 };
 	
-extern struct AliensStruct aliens;
+Aliens aliens;
 		
-extern int32_t shipnum;	
+int shipnum;	
 
 #define ALIENS_MAX_NUMBER_X 10
 #define ALIENS_MAX_NUMBER_Y 5	
 #define ALIENS_MAX_MISSILES 10	
 
 // todo: move to structure
-extern int32_t lowest_ship[ALIENS_MAX_NUMBER_X];
-extern int32_t alienshotx[ALIENS_MAX_MISSILES];
-extern int32_t alienshoty[ALIENS_MAX_MISSILES];
-extern int32_t alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
+int lowest_ship[ALIENS_MAX_NUMBER_X];
+int alienshotx[ALIENS_MAX_MISSILES];
+int alienshoty[ALIENS_MAX_MISSILES];
+int alienshotnum;
+int alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
 
-extern int32_t bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
+int bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
 
 
-void aliensReset(void);
-void bunkersReset(void);	
-int32_t aliensMove(void);
-int32_t aliensMissileMove(void);
-int32_t aliensHitCheck(int32_t shotx, int32_t shoty);
-extern int32_t bunkersHitCheck(int32_t shotx, int32_t shoty);
+void aliensReset();
+void bunkersReset();	
+int aliensMove();
+int aliensMissileMove();
+void render();
+int aliensHitCheck(int shotx, int shoty);
+int bunkersHitCheck(int shotx, int shoty);
 
+	
+// methods that handle graphic display, from view.c
+extern void aliensDisplay(int x, int y, int wid, int hgt);
+extern void aliensClear(int x, int y, int wid, int hgt);
+extern void aliensRefresh(int level, int *pAliens);
+extern void aliensMissileDisplay(int x, int y);
+extern void aliensMissileClear(int x, int y);
+extern void bunkersClearElement(int x, int y);
+extern void bunkersClear();
+extern void bunkersRefresh();
+	
 #endif

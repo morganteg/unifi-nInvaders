@@ -13,29 +13,37 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * aint64_t with this program; if not, write to the Free Software
+ * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
+ 
 
+#include "view.h"
 
+#ifndef UFO
+#define UFO
 
-#ifndef MACRO_UFO
-#define MACRO_UFO
+typedef struct Ufo Ufo;
 		
-struct UfoStruct {
-	int32_t posX;	  // horizontal position of aliens
-	int32_t posY;	  // vertical position of aliens
+struct Ufo {
+	int posX;	  // horizontal position of aliens
+	int posY;	  // vertical position of aliens
 };
 	
-extern struct UfoStruct ufoVar;
+Ufo ufo;
 
-void ufoReset(void);
-int32_t ufoShowUfo(void);
-void ufoMoveLeft(void);
-int32_t ufoHitCheck(int32_t shotCoordX, int32_t shotCoordY);
+void ufoReset();
+int ufoShowUfo();
+void ufoMoveLeft();
+int ufoHitCheck(int shotX, int shotY);
+	
+// methods that handle graphic display, from view.c
+extern void ufoDisplay(int x, int y);
+extern void ufoRefresh();
+extern void ufoClear(int x, int y);
 
 #endif

@@ -13,30 +13,48 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * aint64_t with this program; if not, write to the Free Software
+ * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
- * homepage: ninvaders.sourceforge.net
+ * homepage: http://ninvaders.sourceforge.net
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
+ 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "view.h"
+#include "globals.h"
+
 
 #ifndef NINVADERS
 #define NINVADERS
 
-
-#define KEY_RIGHT 67
-#define KEY_LEFT 68
-
 #define UFO_ALIEN_TYPE   0
+#define RED_ALIEN_TYPE   1
+#define GREEN_ALIEN_TYPE 2
+#define BLUE_ALIEN_TYPE  3 
 
-int32_t main(int32_t argc, char **argv);	// hey! it has to start somewhere!
+int main(int argv, char **argc);	// hey! it has to start somewhere!
+
+extern void render(void);
+	
+void game_over(int a);
+void drawscore();
 		
-void doScoring(int32_t alienType);
+void doScoring(int alienType);
 
 // todo: let's try to not having to declare these "public"
-extern int32_t weite;
-extern int32_t level;
-extern int32_t skill_level;
+int weite;
+int level;
+int skill_level;
+	
+// included from globals.h
+extern void doSleep();
+extern void showUsage();
+extern void showVersion();
+extern void showGplShort();
+extern void showGpl();
 
 #endif
