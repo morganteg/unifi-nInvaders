@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
+ * aint64_t with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
  * homepage: ninvaders.sourceforge.net
@@ -27,18 +27,16 @@
 #include "ufo.h"
 #include "nInvaders.h"
 
-typedef struct Player Player;
-
-struct Player {
-	int posX;	  // horizontal position of player
-	int posY;	  // vertical position of player
-	int speed;	  // 0: no movement; 1: one per turn; etc.
-	int missileFired; // 0: missile not running; 1: missile running
-	int missileX;	  // horizontal position of missile
-	int missileY;	  // vertical position of missile
+struct PlayerStruct {
+	int32_t posX;	  // horizontal position of player
+	int32_t posY;	  // vertical position of player
+	int32_t speed;	  // 0: no movement; 1: one per turn; etc.
+	int32_t missileFired; // 0: missile not running; 1: missile running
+	int32_t missileX;	  // horizontal position of missile
+	int32_t missileY;	  // vertical position of missile
 };
        
-extern Player player;
+extern struct PlayerStruct player;
 
 /**
  * initialize player attributes
@@ -66,7 +64,7 @@ void playerReset(void)
 /**
  * move player horizontally to position newPosX
  */
-static void playerMove(int newPosX)
+static void playerMove(int32_t newPosX)
 {
 	playerClear(player.posX, player.posY);	 // clear sprite
 	player.posX = newPosX;	 // make movement
@@ -127,9 +125,9 @@ void playerTurboOff(void)
 /**
  * player was hit by an alien shot
  */
-int playerHitCheck(int hostileShotX, int hostileShotY)
+int32_t playerHitCheck(int32_t hostileShotX, int32_t hostileShotY)
 {
-	int fPlayerWasHit = 0;
+	int32_t fPlayerWasHit = 0;
 	
 	// if shot reached vertikal position of player
 	if (hostileShotY == PLAYERPOSY) {
@@ -170,10 +168,10 @@ static void playerReloadMissile(void)
  * move player missile and do alien/bunker hit testing
  * return value - 0: still some aliens left, 1: no aliens left
  */
-int playerMoveMissile(void)
+int32_t playerMoveMissile(void)
 {
-	int fNoAliensLeft = 0;	// return value
-	int alienTypeHit = 0;
+	int32_t fNoAliensLeft = 0;	// return value
+	int32_t alienTypeHit = 0;
 
 	// only do movements if there is a missile to move
 	if (player.missileFired == 1) {
@@ -199,7 +197,7 @@ int playerMoveMissile(void)
 
 			aliensClear(aliens.posX, aliens.posY, aliens.right, aliens.bottom); // clear old posiiton of aliens
 			
-			render();
+			//render();
 			if (shipnum == 0) {
 				fNoAliensLeft = 1;
 			}

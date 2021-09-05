@@ -21,11 +21,12 @@
  *
  */
 
-
 #ifndef GLOBALS
 #define GLOBALS
 
-extern void doSleep(int microseconds);
+#include <stdint.h>
+
+extern void doSleep(int32_t microseconds);
 	
 extern void showUsage(void);
 extern void showVersion(void);

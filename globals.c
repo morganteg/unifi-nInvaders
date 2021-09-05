@@ -24,6 +24,7 @@
  
 #include <stdio.h>
 #include <unistd.h>
+#include <stdint.h>
 #include "globals.h"
 
 
@@ -41,7 +42,7 @@
 /**
  * sleep for specified time
  */
-void doSleep(int microseconds)
+void doSleep(int32_t microseconds)
 {
         (void)usleep(microseconds);
 }
@@ -81,7 +82,7 @@ void showUsage(void)
  */
 static void waitForReturn(void)
 {
-	char b[2];
+	int8_t b[2];
 	(void)fprintf(stderr, "...Please press <Enter> to read on...");
 	(void)fgets(b, sizeof(b), stdin);
 }
@@ -240,14 +241,14 @@ void showGpl(void)
 	(void)fprintf(stderr, "\n");
 	(void)fprintf(stderr, "    c) If the modified program normally reads commands interactively\n");
 	(void)fprintf(stderr, "    when run, you must cause it, when started running for such\n");
-	(void)fprintf(stderr, "    interactive use in the most ordinary way, to print or display an\n");
+	(void)fprintf(stderr, "    interactive use in the most ordinary way, to print32_t or display an\n");
 	(void)fprintf(stderr, "    announcement including an appropriate copyright notice and a\n");
 	(void)fprintf(stderr, "    notice that there is no warranty (or else, saying that you provide\n");
 	(void)fprintf(stderr, "    a warranty) and that users may redistribute the program under\n");
 	(void)fprintf(stderr, "    these conditions, and telling the user how to view a copy of this\n");
 	(void)fprintf(stderr, "    License.  (Exception: if the Program itself is interactive but\n");
-	(void)fprintf(stderr, "    does not normally print such an announcement, your work based on\n");
-	(void)fprintf(stderr, "    the Program is not required to print an announcement.)\n");
+	(void)fprintf(stderr, "    does not normally print32_t such an announcement, your work based on\n");
+	(void)fprintf(stderr, "    the Program is not required to print32_t an announcement.)\n");
 	(void)fprintf(stderr, "\n");
 	(void)fprintf(stderr, "These requirements apply to the modified work as a whole.  If\n");
 	(void)fprintf(stderr, "identifiable sections of that work are not derived from the Program,\n");

@@ -20,51 +20,42 @@
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
- 
- 
-#include "view.h"
 
-#ifndef ALIENS
-#define ALIENS
 
-typedef struct Aliens Aliens;
+#ifndef MACRO_ALIENS
+#define MACRO_ALIENS
 	
-struct Aliens {
-	int posX;	  // horizontal position of aliens
-	int posY;	  // vertical position of aliens
-	int right;
-	int left;
-	int bottom;
-	int speed;	  // 0: no movement; 1: one per turn; etc.
+extern struct AliensStruct {
+	int32_t posX;	  // horizontal position of aliens
+	int32_t posY;	  // vertical position of aliens
+	int32_t right;
+	int32_t left;
+	int32_t bottom;
+	int32_t speed;	  // 0: no movement; 1: one per turn; etc.
 };
 	
-Aliens aliens;
+extern struct AliensStruct aliens;
 		
-int shipnum;	
+extern int32_t shipnum;	
 
 #define ALIENS_MAX_NUMBER_X 10
 #define ALIENS_MAX_NUMBER_Y 5	
 #define ALIENS_MAX_MISSILES 10	
 
 // todo: move to structure
-extern int lowest_ship[ALIENS_MAX_NUMBER_X];
-extern int alienshotx[ALIENS_MAX_MISSILES];
-extern int alienshoty[ALIENS_MAX_MISSILES];
-extern int alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
+extern int32_t lowest_ship[ALIENS_MAX_NUMBER_X];
+extern int32_t alienshotx[ALIENS_MAX_MISSILES];
+extern int32_t alienshoty[ALIENS_MAX_MISSILES];
+extern int32_t alienBlock[ALIENS_MAX_NUMBER_Y][ALIENS_MAX_NUMBER_X];
 
-extern int bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
+extern int32_t bunker[BUNKERHEIGHT][BUNKERWIDTH + 1];	
 
 
 void aliensReset(void);
 void bunkersReset(void);	
-int aliensMove(void);
-int aliensMissileMove(void);
-void render(void);
-int aliensHitCheck(int shotx, int shoty);
-int bunkersHitCheck(int shotx, int shoty);
+int32_t aliensMove(void);
+int32_t aliensMissileMove(void);
+int32_t aliensHitCheck(int32_t shotx, int32_t shoty);
+extern int32_t bunkersHitCheck(int32_t shotx, int32_t shoty);
 
-	
-// methods that handle graphic display, from view.c
-extern void bunkersRefresh(void);
-	
 #endif

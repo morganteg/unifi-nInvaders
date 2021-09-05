@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
+ * aint64_t with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
  * homepage: ninvaders.sourceforge.net
@@ -22,10 +22,11 @@
  */
  
 
-#ifndef PLAYER
-#define PLAYER
+#ifndef MACRO_PLAYER
+#define MACRO_PLAYER
 
 #include "view.h"
+#include <stdint.h>
 
 
 void playerReset(void);
@@ -34,14 +35,10 @@ void playerMoveLeft(void);
 void playerMoveRight(void);
 void playerTurboOn(void);
 void playerTurboOff(void);
-int playerHitCheck(int hostileShotX, int hostileShotY);
+int32_t playerHitCheck(int32_t hostileShotX, int32_t hostileShotY);
 void playerLaunchMissile(void);
-int playerMoveMissile(void);
+int32_t playerMoveMissile(void);
 void playerExplode(void);
-	
-// methods that handle graphic display, from view.c
-extern void playerInit(void);
-extern void playerMissileInit(void);
 	
 #endif
 

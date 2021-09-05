@@ -20,16 +20,11 @@
  * mailto: ninvaders-devel@lists.sourceforge.net
  *
  */
- 
-
-#include <ncurses.h>
-#include <unistd.h>
-#include <signal.h>
-
 #ifndef VIEW
 #define VIEW
 
 #include "globals.h"
+#include <stdint.h>
 
 #define SCREENHEIGHT 24
 #define SCREENWIDTH 80	
@@ -51,28 +46,28 @@
 	
 void graphicEngineInit(void);
 	
-void aliensClear(int x, int y, int wid, int hgt);
-void aliensDisplay(int x, int y, int wid, int hgt);
-void aliensMissileClear(int x, int y);
-void aliensMissileDisplay(int x, int y);
-void aliensRefresh(int level, int *pAliens);
+void aliensClear(int32_t x, int32_t y, int32_t wid, int32_t hgt);
+void aliensDisplay(int32_t x, int32_t y, int32_t wid, int32_t hgt);
+void aliensMissileClear(int32_t x, int32_t y);
+void aliensMissileDisplay(int32_t x, int32_t y);
+void aliensRefresh(int32_t levelView, int32_t *pAliens);
 void battleFieldClear(void);
 void bunkersClear(void);
-void bunkersClearElement(int x, int y);
-void bunkersDisplay(int *pBunker);
+void bunkersClearElement(int32_t x, int32_t y);
+void bunkersDisplay(int32_t *pBunker);
 void gameOverDisplay(void);
-void playerClear(int x, int y);
-void playerDisplay(int x, int y);
-void playerExplosionDisplay(int x, int y);
-void playerMissileClear(int x, int y);
-void playerMissileDisplay(int x, int y);
+void playerClear(int32_t x, int32_t y);
+void playerDisplay(int32_t x, int32_t y);
+void playerExplosionDisplay(int32_t x, int32_t y);
+void playerMissileClear(int32_t x, int32_t y);
+void playerMissileDisplay(int32_t x, int32_t y);
 void titleScreenClear(void);
 void titleScreenDisplay(void);
-void ufoClear(int x, int y);
-void ufoDisplay(int x, int y);
+void ufoClear(int32_t x, int32_t y);
+void ufoDisplay(int32_t x, int32_t y);
 void ufoRefresh(void);
 
-void statusDisplay(int level, int score, int lives);	
+void statusDisplay(int32_t levelView, int32_t scoreView, int32_t livesView);	
 void refreshScreen(void);
 
 #endif

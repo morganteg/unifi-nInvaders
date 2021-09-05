@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
+ * aint64_t with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
  *
  * homepage: ninvaders.sourceforge.net
@@ -21,12 +21,12 @@
  *
  */
  
-
+#include <ncurses.h>
 #include "view.h"
-#include "globals.h"
 #include <stdlib.h>	
 #include <unistd.h>
 #include <signal.h>
+#include <stdio.h>
 
 #define RED 1
 #define GREEN 2
@@ -65,7 +65,7 @@ static void playerInit(void)
 /**
  * display player sprite
  */
-void playerDisplay(int x, int y) 
+void playerDisplay(int32_t x, int32_t y) 
 {
 	(void)copywin(wPlayer,wBattleField,0,0,y,x,y,x+PLAYERWIDTH-1,0);
 }
@@ -74,7 +74,7 @@ void playerDisplay(int x, int y)
 /**
  * clear player sprite
  */
-void playerClear(int x, int y) 
+void playerClear(int32_t x, int32_t y) 
 {
 	(void)copywin(wEmpty,wBattleField,0,0,y,x,y,x+PLAYERWIDTH-1,0);
 }
@@ -96,7 +96,7 @@ static void playerMissileInit(void)
 /**
  * display missile sprite
  */
-void playerMissileDisplay(int x, int y) 
+void playerMissileDisplay(int32_t x, int32_t y) 
 {
 	(void)copywin(wPlayerMissile,wBattleField,0,0,y,x,y,x,0);
 }
@@ -105,7 +105,7 @@ void playerMissileDisplay(int x, int y)
 /**
  * clear missile sprite
  */
-void playerMissileClear(int x, int y) 
+void playerMissileClear(int32_t x, int32_t y) 
 {
 	(void)copywin(wEmpty,wBattleField,0,0,y,x,y,x,0);
 }
@@ -114,11 +114,11 @@ void playerMissileClear(int x, int y)
 /**
  * some explosion animation
  */
-void playerExplosionDisplay(int x, int y)
+void playerExplosionDisplay(int32_t x, int32_t y)
 {
 	WINDOW* wPlayerExplosion;
-	char playerExplosionChars[16+1]="@~`.,^#*-_=\\/%{}";
-	int t,s;
+	int8_t playerExplosionChars[16+1]="@~`.,^#*-_=\\/%{}";
+	int32_t t,s;
 	
 	wPlayerExplosion=newpad(1,PLAYERWIDTH);		// new pad
 	(void)wattrset(wPlayerExplosion,COLOR_PAIR(YELLOW));	// set color
@@ -151,7 +151,7 @@ static void aliensInit(void)
 /**
  * display aliens sprite
  */
-void aliensDisplay(int x, int y, int wid, int hgt) 
+void aliensDisplay(int32_t x, int32_t y, int32_t wid, int32_t hgt) 
 {
 	(void)copywin(wAliens,wBattleField,0,0,y,x,y+hgt,x+wid+2,0);
 }
@@ -160,7 +160,7 @@ void aliensDisplay(int x, int y, int wid, int hgt)
 /**
  * clear aliens sprite
  */
-void aliensClear(int x, int y, int wid, int hgt) 
+void aliensClear(int32_t x, int32_t y, int32_t wid, int32_t hgt) 
 {
 	(void)copywin(wEmpty,wBattleField,0,0,y,x,y+hgt,x+wid+2,0);
 }
@@ -181,7 +181,7 @@ static void aliensMissileInit(void)
 /**
  * display missile sprite
  */
-void aliensMissileDisplay(int x, int y) 
+void aliensMissileDisplay(int32_t x, int32_t y) 
 {
 	(void)copywin(wAliensMissile,wBattleField,0,0,y,x,y,x,0);
 }
@@ -190,7 +190,7 @@ void aliensMissileDisplay(int x, int y)
 /**
  * clear missile sprite
  */
-void aliensMissileClear(int x, int y) 
+void aliensMissileClear(int32_t x, int32_t y) 
 {
 	(void)copywin(wEmpty,wBattleField,0,0,y,x,y,x,0);
 }
@@ -199,17 +199,17 @@ void aliensMissileClear(int x, int y)
 /**
  * refresh aliens sprite
  */
-void aliensRefresh(int level, int *pAliens) 
+void aliensRefresh(int32_t levelView, int32_t *pAliens) 
 {
-	static int frame = 0; // used for animation; mod 2 == 0: frame1, mod2 == 1: frame2
-	int k,row;
-	int c = 0;
-	int alienType = 0;
-	char ships[2][9][3+1] = {
+	static int32_t frame = 0; // used for animation; mod 2 == 0: frame1, mod2 == 1: frame2
+	int32_t k,row;
+	int32_t c = 0;
+	int32_t alienType = 0;
+	int8_t ships[2][9][3+1] = {
 		{",^,", "_O-", "-o-",  "o=o", "<O>", "_x_", "*^*", "\\_/", "o o"},
 		{".-.", "-O_", "/o\\", "o-o", "<o>", "-x-", "o^o", "/~\\", "oo "}
 	};
-	int colors[9] = {RED, GREEN, BLUE, RED, YELLOW, WHITE, WHITE, YELLOW, RED};
+	int32_t colors[9] = {RED, GREEN, BLUE, RED, YELLOW, WHITE, WHITE, YELLOW, RED};
 
 	(void)wclear(wAliens);						// clear pad
 	(void)wattrset(wAliens,COLOR_PAIR(RED));				// set color
@@ -224,9 +224,9 @@ void aliensRefresh(int level, int *pAliens)
 				
 				if (alienType != 0) {		// if there is an alien to display
 					(void)wattrset(wAliens,COLOR_PAIR(colors[alienType-1]));		   // set color
-					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((level-1)%3))][0]);  // set char1
-					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((level-1)%3))][1]);  // set char2
-					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((level-1)%3))][2]);  // set char3
+					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((levelView-1)%3))][0]);  // set char1
+					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((levelView-1)%3))][1]);  // set char2
+					(void)waddch(wAliens,ships[frame%2][alienType-1+(3*((levelView-1)%3))][2]);  // set char3
 					if (alienType > 4) {
 						*(pAliens + c * ALIENS_MAX_NUMBER_X + k) = (alienType + 1) % 9;
 					} // todo: what's that? If alien_type > 4 then do a modulo operation???
@@ -257,14 +257,14 @@ static void bunkersInit(void)
  * display bunkers sprite
  * needs pointer to bunker-array
  */
-void bunkersDisplay(int *pBunker) 
+void bunkersDisplay(int32_t *pBunker) 
 {
-	int l, k;
+	int32_t l, k;
 	(void)wclear(wBunkers);
 	(void)wattrset(wBunkers,COLOR_PAIR(CYAN));
 	for (l=0;l<BUNKERHEIGHT;l++) {
 		for (k=0;k<BUNKERWIDTH;k++) {
-			if (*(pBunker + (l * (BUNKERWIDTH + 1)) + k) == 1) {	//if (pBunker[l][k]==1) {
+			if (*(pBunker + (l * (BUNKERWIDTH + 1)) + k) == 1) {
 				(void)waddch(wBunkers,'#');
 			} else {
 				(void)waddch(wBunkers,' ');
@@ -288,7 +288,7 @@ void bunkersClear(void)
 /**
  * clear one element of bunkers sprite at position (x, y)
  */
-void bunkersClearElement(int x, int y) 
+void bunkersClearElement(int32_t x, int32_t y) 
 {
 	(void)copywin(wEmpty, wBattleField, 0, 0, y, x, y, x, 0);
 }
@@ -299,8 +299,8 @@ void bunkersClearElement(int x, int y)
  */
 void ufoRefresh(void)
 {
-	char ufo[4][6] = {"<o o>", "<oo >", "<o o>", "< oo>"};
-	static int frame = 0;
+	int8_t ufo[4][6] = {"<o o>", "<oo >", "<o o>", "< oo>"};
+	static int32_t frame = 0;
 
 	(void)wclear(wUfo);
         (void)wattrset(wUfo, COLOR_PAIR(MAGENTA));
@@ -324,7 +324,7 @@ static void ufoInit(void)
 /**
  * display ufo sprite
  */
-void ufoDisplay(int x, int y)
+void ufoDisplay(int32_t x, int32_t y)
 {
 	(void)copywin(wUfo, wBattleField, 0, 0, y, x, y, x + UFOWIDTH - 1, 0);
 }
@@ -333,7 +333,7 @@ void ufoDisplay(int x, int y)
 /**
  * clear ufo sprite
  */
-void ufoClear(int x, int y) 
+void ufoClear(int32_t x, int32_t y) 
 {
 	(void)copywin(wEmpty, wBattleField, 0, 0, y, x, y, x + UFOWIDTH - 1, 0);
 }
@@ -368,8 +368,8 @@ static void gameOverInit(void)
  */ 
 void gameOverDisplay(void)
 {
-	int x = (SCREENWIDTH / 2) - (31 / 2);
-	int y = (SCREENHEIGHT / 2) - (13 / 2);
+	int32_t x = (SCREENWIDTH / 2) - (31 / 2);
+	int32_t y = (SCREENHEIGHT / 2) - (13 / 2);
 	(void)copywin(wGameOver, wBattleField, 0, 0, y, x, y + 12, x + 30, 0);
 	(void)wrefresh(wBattleField);
 }
@@ -390,21 +390,21 @@ static void titleScreenInit(void)
  */
 void titleScreenDisplay(void)
 {
-	static int frame = 0;
-	int x, y;
-	int i;
+	static int32_t frame = 0;
+	int32_t x, y;
+	int32_t iCounter;
 	WINDOW *wTitleText;
 	WINDOW *wAliensLocal;
 	WINDOW *wStartText;
-	char ufo[4][6] = {"<o o>", "<oo >", "<o o>", "< oo>"};
-	char aliens[2][9][3+1] = {
+	int8_t ufo[4][6] = {"<o o>", "<oo >", "<o o>", "< oo>"};
+	int8_t aliensView[2][9][3+1] = {
 		{",^,", "_O-", "-o-",  "o=o", "<O>", "_x_", "*^*", "\\_/", "o o"},
 		{".-.", "-O_", "/o\\", "o-o", "<o>", "-x-", "o^o", "/~\\", "oo "}
 	};
-	int score[3] = {200, 150, 100};
-	int colors[9] = {RED, GREEN, BLUE, RED, GREEN, BLUE, RED, GREEN, BLUE};
-	char buffer[12];
-	static int alien_type = 0;
+	int32_t scoreView[3] = {200, 150, 100};
+	int32_t colors[9] = {RED, GREEN, BLUE, RED, GREEN, BLUE, RED, GREEN, BLUE};
+	int8_t buffer[12];
+	static int32_t alienTypeView = 0;
 
 	wTitleText = newpad(4, 41);
 	(void)wclear(wTitleText);
@@ -421,16 +421,16 @@ void titleScreenDisplay(void)
 	(void)wattrset(wAliensLocal, COLOR_PAIR(MAGENTA));
 	waddstr(wAliensLocal, buffer);
 	if ((frame = frame % 60) == 0) {
-		alien_type = 0;
+		alienTypeView = 0;
 	} else if (frame == 20) {
-		alien_type = 3;
+		alienTypeView = 3;
 	} else if (frame == 40) {
-		alien_type = 6;
+		alienTypeView = 6;
 	}
-	for (i = alien_type; i < alien_type + 3; i++) {
+	for (iCounter = alienTypeView; iCounter < alienTypeView + 3; iCounter++) {
 		waddstr(wAliensLocal, "           ");
-		(void)snprintf(buffer, sizeof(buffer), "%s   = %d", aliens[frame % 2][i], score[i % 3]);
-		(void)wattrset(wAliensLocal, COLOR_PAIR(colors[i]));
+		(void)snprintf(buffer, sizeof(buffer), "%s   = %d", aliensView[frame % 2][iCounter], scoreView[iCounter % 3]);
+		(void)wattrset(wAliensLocal, COLOR_PAIR(colors[iCounter]));
 		waddstr(wAliensLocal, buffer);
 	}
 
@@ -479,10 +479,10 @@ static void statusInit(void)
 /**
  * display scores
  */
-void statusDisplay(int level, int score, int lives)
+void statusDisplay(int32_t levelView, int32_t scoreView, int32_t livesView)
 {
-	int t, xOffset;
-	char strStatus[55];
+	int32_t t, xOffset;
+	int8_t strStatus[55];
 	// "Level: 01 Score: 0001450 Lives: /-\ /-\ /-\ /-\ /-\ "
 	// "1234567890123456789012345678901234567890123456789012"
 
@@ -491,14 +491,14 @@ void statusDisplay(int level, int score, int lives)
 	
 
 
-	(void)sprintf(strStatus, "Level: %2.2d Score: %2.7d Lives: ", level, score);
+	(void)sprintf(strStatus, "Level: %2.2d Score: %2.7d Lives: ", levelView, scoreView);
 
 	(void)wclear(wStatus);
 	(void)wattrset(wStatus, COLOR_PAIR(RED));
 	waddstr(wStatus, strStatus);
 
 	// show maximal five lives
-	for (t = 1; ((t <= 5) && (t < lives)); t++){
+	for (t = 1; ((t <= 5) && (t < livesView)); t++){
 		waddstr(wStatus, "/-\\ ");
 	}
 	
@@ -545,7 +545,7 @@ void refreshScreen(void)
 /**
  * do proper cleanup
  */
-static void finish(void)
+static void finishView(void)
 {
 	(void)endwin();	// <curses.h> reset terminal into proper non-visual mode
 	exit(0);
@@ -557,7 +557,7 @@ static void finish(void)
  */
 void graphicEngineInit(void)
 {
-	(void) signal(SIGINT, finish);	// <signal.h> on signal "SIGINT" call method "finish"
+	(void) signal(SIGINT, finishView);	// <signal.h> on signal "SIGINT" call method "finish"
 	(void) initscr();		// <curses.h> do initialization work 
 	(void)keypad(stdscr, TRUE);		// <curses.h> enable keypad for input
 	(void) nonl();			// <curses.h> disable translation return/ newline for detection of return key

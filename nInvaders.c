@@ -13,7 +13,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program; if not, write to the Free Software
+* aint64_t with this program; if not, write to the Free Software
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 *
 * homepage: ninvaders.sourceforge.net
@@ -21,10 +21,11 @@
 *
 */
 
-
+#include <signal.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/time.h>
+#include <stdint.h>
 #include "nInvaders.h"
 #include "player.h"
 #include "aliens.h"
@@ -32,9 +33,9 @@
 
 #define FPS 50
 
-static int lives;
-static long score;
-static int status; // status handled in timer
+static int32_t lives;
+static int64_t score;
+static int32_t status; // status handled in timer
 
 #define GAME_LOOP 1
 #define GAME_NEXTLEVEL 2
@@ -44,7 +45,10 @@ static int status; // status handled in timer
 #define GAME_HIGHSCORE 6
 
 
-
+static void drawscore(void)
+{
+  statusDisplay(level, score, lives);
+}
 
 /**
  * initialize level: reset attributes of most units
@@ -55,7 +59,6 @@ static void initLevel(void)
   aliensReset();
   ufoReset();
   bunkersReset();
-  render();
   drawscore();
 }
 
@@ -63,9 +66,9 @@ static void initLevel(void)
 /**
  * evaluate command line parameters 
  */
-static void evaluateCommandLine(int argc, char **argv)
+static void evaluateCommandLine(int32_t argc, int8_t **argv)
 {
-  int argcMod = argc;
+  int32_t argcMod = argc;
   
   // -l : set skill level
   if (argcMod == 3 && strcmp(argv[1], "-l") == 0) {
@@ -90,7 +93,7 @@ static void evaluateCommandLine(int argc, char **argv)
 }
 
 
-static void finish(int arg)
+static void finish(void)
 {
   (void)endwin();
   (void)showGplShort();
@@ -101,33 +104,28 @@ static void finish(int arg)
   (void)fprintf(stderr,"\n");
   
   (void)fprintf(stderr,"Final score: %7.7ld, Final level: %2.2d\nFinal rating... ",score,level);
-  if (lives>0)
+  if (lives>0) {
     (void)fprintf(stderr,"Quitter\n\n");
-  else if(score<5000)
+  } else if(score<5000) {
     (void)fprintf(stderr,"Alien Fodder\n\n");
-  else if(score<7500)
+  } else if(score<7500) {
     (void)fprintf(stderr,"Easy Target\n\n");
-  else if(score<10000)
+  } else if(score<10000) {
     (void)fprintf(stderr,"Barely Mediocre\n\n");
-  else if(score<12500)
+  } else if(score<12500) {
     (void)fprintf(stderr,"Shows Promise\n\n");
-  else if(score<15000)
+  }else if(score<15000) {
     (void)fprintf(stderr,"Alien Blaster\n\n");
-  else if(score<20000)
+  }else if(score<20000){
     (void)fprintf(stderr,"Earth Defender\n\n");
-  else if(score>19999)
+  }else if(score>19999){
     (void)fprintf(stderr,"Supreme Protector\n\n");
-  else
+  }else{
     (void)fprintf(stderr, "Error");
+}
   
   (void)showVersion();
   exit(0);
-}
-
-
-static void drawscore(void)
-{
-  statusDisplay(level, score, lives);
 }
 
 
@@ -136,8 +134,8 @@ static void drawscore(void)
  */
 static void readInput(void)
 {
-  int ch;
-  static int lastmove;
+  int32_t ch;
+  static int32_t lastmove;
 
   ch = getch();		// get key pressed
 
@@ -214,12 +212,12 @@ static void readInput(void)
  */
 static void handleTimer(void)
 {
-  static int aliens_move_counter = 0; 
-  static int aliens_shot_counter = 0;
-  static int player_shot_counter = 0;
-  static int ufo_move_counter = 0;
-  static int title_animation_counter = 0;
-  static int game_over_counter = 0;
+  static int32_t aliens_move_counter = 0; 
+  static int32_t aliens_shot_counter = 0;
+  static int32_t player_shot_counter = 0;
+  static int32_t ufo_move_counter = 0;
+  static int32_t title_animation_counter = 0;
+  static int32_t game_over_counter = 0;
   
   switch (status) {
     
@@ -298,7 +296,7 @@ static void handleTimer(void)
       break;
     
     case GAME_EXIT:      // exit game
-      finish(0);
+      finish();
       break;
     
     case GAME_HIGHSCORE: // display highscore
@@ -335,7 +333,7 @@ static void setUpTimer(void)
 }
 
 
-int main(int argc, char **argv)
+int32_t main(int32_t argc, char **argv)
 {
   weite = 0;
   score = 0;
@@ -360,9 +358,9 @@ int main(int argc, char **argv)
 }
 
 
-void doScoring(int alienType)
+void doScoring(int32_t alienType)
 {
-  int points[4] = {500, 200, 150, 100};   	// 0: ufo, 1:red, 2:green, 3:blue
+  int32_t points[4] = {500, 200, 150, 100};   	// 0: ufo, 1:red, 2:green, 3:blue
   
   score += points[alienType];		// every alien type does different scoring points
   
