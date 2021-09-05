@@ -1,0 +1,88 @@
+Kind,Name,CountLineCode,Cyclomatic
+Struct,Aliens,0,
+Struct,Player,0,
+Struct,Ufo,0,
+Static Function,aliensInit,5,1
+Static Function,aliensMissileInit,7,1
+Static Function,battleFieldInit,8,1
+Static Function,bunkersInit,5,1
+Static Function,evaluateCommandLine,18,5
+Static Function,finish,5,1
+Static Function,finish,28,9
+Static Function,gameOverInit,19,1
+Static Function,initLevel,9,1
+Static Function,playerInit,7,1
+Static Function,playerMissileInit,8,1
+Static Function,playerMove,6,1
+Static Function,playerReloadMissile,4,1
+Static Function,titleScreenInit,5,1
+Static Function,ufoInit,6,1
+Static Function,ufoMove,7,1
+Function,aliensClear,4,1
+Function,aliensDisplay,4,1
+Function,aliensHitCheck,15,3
+Function,aliensMissileClear,4,1
+Function,aliensMissileDisplay,4,1
+Function,aliensMissileMove,40,9
+Function,aliensMove,25,6
+Function,aliensRefresh,36,7
+Function,aliensReset,33,5
+Function,battleFieldClear,4,1
+Function,bunkersClear,4,1
+Function,bunkersClearElement,4,1
+Function,bunkersDisplay,16,4
+Function,bunkersHitCheck,15,3
+Function,bunkersReset,19,4
+Function,doScoring,9,2
+Function,doSleep,4,1
+Function,drawscore,4,1
+Function,gameOverDisplay,7,1
+Function,graphicEngineInit,27,1
+Function,handleTimer,69,20
+Function,main,16,2
+Function,playerClear,4,1
+Function,playerDisplay,4,1
+Function,playerExplode,4,1
+Function,playerExplosionDisplay,17,3
+Function,playerHitCheck,10,3
+Function,playerLaunchMissile,8,2
+Function,playerMissileClear,4,1
+Function,playerMissileDisplay,4,1
+Function,playerMoveLeft,8,2
+Function,playerMoveMissile,40,8
+Function,playerMoveRight,8,2
+Function,playerReset,14,2
+Function,playerTurboOff,4,1
+Function,playerTurboOn,4,1
+Function,readInput,57,16
+Function,refreshScreen,5,2
+Function,render,31,9
+Function,setUpTimer,13,1
+Function,showGpl,384,1
+Function,showGplShort,21,1
+Function,showUsage,8,1
+Function,showVersion,10,1
+Function,statusDisplay,14,2
+Function,statusInit,5,1
+Function,titleScreenClear,4,1
+Function,titleScreenDisplay,59,5
+Function,ufoClear,4,1
+Function,ufoDisplay,4,1
+Function,ufoHitCheck,11,3
+Function,ufoMoveLeft,8,2
+Function,ufoRefresh,9,1
+Function,ufoReset,7,1
+Function,ufoShowUfo,9,3
+Function,waitForReturn,6,1
+File,aliens.c,178,
+File,aliens.h,32,
+File,globals.c,433,
+File,globals.h,5,
+File,nInvaders.c,226,
+File,nInvaders.h,13,
+File,player.c,120,
+File,player.h,18,
+File,ufo.c,43,
+File,ufo.h,13,
+File,view.c,338,
+File,view.h,23,
