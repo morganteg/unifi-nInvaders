@@ -122,7 +122,7 @@ static void finish(void)
     (void)fprintf(stderr,"Supreme Protector\n\n");
   }else{
     (void)fprintf(stderr, "Error");
-}
+  }
   
   (void)showVersion();
   exit(0);
@@ -205,6 +205,83 @@ static void readInput(void)
   
 }
 
+void handleGameNextLevel(int32_t aliens_move_counter, int32_t aliens_shot_counter, int32_t ufo_move_counter) {
+  level+=1;	// increase level
+
+  initLevel();	// initialize level
+  
+  aliens_move_counter = 0; 
+  aliens_shot_counter = 0;
+  static int32_t layer_shot_counter = 0;
+  ufo_move_counter = 0;
+  
+  weite = (shipnum+(skill_level*10)-(level*5)+5)/10;
+  
+  if (weite < 0) {
+    weite = 0;
+  }
+  
+  // change status and start game!
+  status = GAME_LOOP;
+}
+
+void handleGameLoop(int32_t aliens_move_counter, int32_t player_shot_counter, int32_t aliens_shot_counter, int32_t ufo_move_counter) {
+  // move aliens			
+  if (aliens_move_counter == 0 && aliensMove() == 1) {
+    // aliens reached player
+    lives = 0;
+    status = GAME_OVER;
+  }
+  
+  // move player missile			
+  if (player_shot_counter == 0 && playerMoveMissile() == 1) {
+    // no aliens left
+    status = GAME_NEXTLEVEL;
+  }
+  
+  // move aliens' missiles
+  if (aliens_shot_counter == 0 && aliensMissileMove() == 1) {
+    // player was hit
+    lives--;			// player looses one life
+    drawscore();	                // draw score
+    playerExplode();		// display some explosion graphics
+    if (lives == 0) {		// if no lives left ...
+      status = GAME_OVER;		// ... exit game
+    }
+  }
+  
+  // move ufo
+  if (ufo_move_counter == 0 && ufoShowUfo() == 1) {
+    ufoMoveLeft();			// move it one position to the left
+  }
+  
+  
+  if (aliens_shot_counter+1 >= 5) {aliens_shot_counter=0;}     // speed of alien shot
+  if (player_shot_counter+1 >= 1) {player_shot_counter=0;}     // speed of player shot
+  if (aliens_move_counter+1 >= weite) {aliens_move_counter=0;} // speed of aliend
+  if (ufo_move_counter+1 >= 3) {ufo_move_counter=0;}           // speed of ufo
+  
+  refreshScreen();
+}
+
+void handleGameOver(int32_t game_over_counter) {
+  if (game_over_counter == 100) {
+    battleFieldClear();
+    status = GAME_HIGHSCORE;
+    game_over_counter = 0;
+  } else {
+    gameOverDisplay();
+    game_over_counter++;
+  }
+}
+
+void handleGameHighScore(int32_t title_animation_counter) {
+  if (title_animation_counter == 0) {
+    titleScreenDisplay();
+  }
+
+  if (title_animation_counter+1 >= 6) {title_animation_counter = 0;} // speed of animation
+}
 
 /**
  * timer
@@ -220,91 +297,22 @@ static void handleTimer(void)
   static int32_t game_over_counter = 0;
   
   switch (status) {
-    
     case GAME_NEXTLEVEL:    // go to next level
-      
-      level+=1;	// increase level
-
-      initLevel();	// initialize level
-      
-      aliens_move_counter = 0; 
-      aliens_shot_counter = 0;
-      player_shot_counter = 0;
-      ufo_move_counter = 0;
-      
-      weite = (shipnum+(skill_level*10)-(level*5)+5)/10;
-      
-      if (weite < 0) {
-        weite = 0;
-      }
-      
-      // change status and start game!
-      status = GAME_LOOP;
+      handleGameNextLevel(aliens_move_counter, aliens_shot_counter, ufo_move_counter);
       break;
     case GAME_LOOP:   	 // do game handling
-      
-      // move aliens			
-      if (aliens_move_counter == 0 && aliensMove() == 1) {
-        // aliens reached player
-        lives = 0;
-        status = GAME_OVER;
-      }
-      
-      // move player missile			
-      if (player_shot_counter == 0 && playerMoveMissile() == 1) {
-        // no aliens left
-        status = GAME_NEXTLEVEL;
-      }
-      
-      // move aliens' missiles
-      if (aliens_shot_counter == 0 && aliensMissileMove() == 1) {
-        // player was hit
-        lives--;			// player looses one life
-        drawscore();	                // draw score
-        playerExplode();		// display some explosion graphics
-        if (lives == 0) {		// if no lives left ...
-          status = GAME_OVER;		// ... exit game
-        }
-      }
-      
-      // move ufo
-      if (ufo_move_counter == 0 && ufoShowUfo() == 1) {
-        ufoMoveLeft();			// move it one position to the left
-      }
-      
-      
-      if (aliens_shot_counter+1 >= 5) {aliens_shot_counter=0;}     // speed of alien shot
-      if (player_shot_counter+1 >= 1) {player_shot_counter=0;}     // speed of player shot
-      if (aliens_move_counter+1 >= weite) {aliens_move_counter=0;} // speed of aliend
-      if (ufo_move_counter+1 >= 3) {ufo_move_counter=0;}           // speed of ufo
-      
-      refreshScreen();
+      handleGameLoop(aliens_move_counter, player_shot_counter, aliens_shot_counter, ufo_move_counter);
       break;
-    
     case GAME_PAUSED:    // game is paused
       break;
-    
     case GAME_OVER:      // game over
-      if (game_over_counter == 100) {
-        battleFieldClear();
-        status = GAME_HIGHSCORE;
-        game_over_counter = 0;
-      } else {
-        gameOverDisplay();
-        game_over_counter++;
-      }
+      handleGameOver(game_over_counter);
       break;
-    
     case GAME_EXIT:      // exit game
       finish();
       break;
-    
     case GAME_HIGHSCORE: // display highscore
-      if (title_animation_counter == 0) {
-        titleScreenDisplay();
-      }
-
-      if (title_animation_counter+1 >= 6) {title_animation_counter = 0;} // speed of animation
+      handleGameHighScore(title_animation_counter);
       break;
     
     default:
