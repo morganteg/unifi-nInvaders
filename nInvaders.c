@@ -128,6 +128,62 @@ static void finish(void)
   exit(0);
 }
 
+static void readInputGamePaused(int32_t ch) 
+{
+  if (ch == 'p') {
+    status = GAME_LOOP;
+  }
+}
+
+static void readInputGameHighScore(int32_t ch)
+{
+  if (ch == ' ') {
+    titleScreenClear();
+    level = 0;      // reset level
+    score = 0;      // reset score
+    lives = 3;      // restore lives
+    status = GAME_NEXTLEVEL;
+  } else if (ch == 'q') {	// quit game
+    status = GAME_EXIT;
+  } else {
+    (void)fprintf(stderr, "Error");
+  }
+}
+
+static void readInputDefault(int32_t ch, int32_t lastmove)
+{
+  if (ch == 'l' || ch == KEY_RIGHT) {	// move player right
+    if (lastmove == 'l') {
+      playerTurboOn();	// enable Turbo
+    } else {
+      playerTurboOff();	// disable Turbo
+    }
+    playerMoveRight();		// move player
+    lastmove = 'l';			// remember last move for turbo mode
+  } else if (ch == 'h' || ch == KEY_LEFT) {	// move player left 
+    if (lastmove == 'h') {
+      playerTurboOn();	// enable Turbo
+    } else {
+      playerTurboOff();	// disable Turbo
+    }
+    playerMoveLeft();		// move player
+    lastmove = 'h';			// remember last move for turbo mode
+  } else if (ch == 'k' || ch == ' ') {	// shoot missile
+    playerLaunchMissile();
+  } else if (ch == 'p') {			// pause game until 'p' pressed again
+    // set status to game paused
+    status = GAME_PAUSED;
+  } else if (ch == 'W') {			// cheat: goto next level
+    status = GAME_NEXTLEVEL;
+  } else if (ch == 'L') {			// cheat: one more live
+    lives++;
+    drawscore();
+  } else if (ch == 'q') {	// quit game
+    status = GAME_EXIT;
+  } else {		// disable turbo mode if key is not kept pressed
+    lastmove = ' ';
+  }
+}
 
 /**
  * reads input from keyboard and do action
@@ -142,63 +198,18 @@ static void readInput(void)
   switch (status) {
 
     case GAME_PAUSED:
-
-      if (ch == 'p') {
-        status = GAME_LOOP;
-      }
+      readInputGamePaused(ch);
       break;
     
     case GAME_HIGHSCORE:
-
-      if (ch == ' ') {
-        titleScreenClear();
-        level = 0;      // reset level
-        score = 0;      // reset score
-        lives = 3;      // restore lives
-        status = GAME_NEXTLEVEL;
-      } else if (ch == 'q') {	// quit game
-        status = GAME_EXIT;
-      } else {
-        (void)fprintf(stderr, "Error");
-      }
+      readInputGameHighScore(ch);
       break;
 
     case GAME_OVER:
       break; // don't do anything
 
     default:
-
-      if (ch == 'l' || ch == KEY_RIGHT) {	// move player right
-        if (lastmove == 'l') {
-          playerTurboOn();	// enable Turbo
-        } else {
-          playerTurboOff();	// disable Turbo
-        }
-        playerMoveRight();		// move player
-        lastmove = 'l';			// remember last move for turbo mode
-      } else if (ch == 'h' || ch == KEY_LEFT) {	// move player left 
-        if (lastmove == 'h') {
-          playerTurboOn();	// enable Turbo
-        } else {
-          playerTurboOff();	// disable Turbo
-        }
-        playerMoveLeft();		// move player
-        lastmove = 'h';			// remember last move for turbo mode
-      } else if (ch == 'k' || ch == ' ') {	// shoot missile
-        playerLaunchMissile();
-      } else if (ch == 'p') {			// pause game until 'p' pressed again
-        // set status to game paused
-        status = GAME_PAUSED;
-      } else if (ch == 'W') {			// cheat: goto next level
-        status = GAME_NEXTLEVEL;
-      } else if (ch == 'L') {			// cheat: one more live
-        lives++;
-        drawscore();
-      } else if (ch == 'q') {	// quit game
-        status = GAME_EXIT;
-      } else {		// disable turbo mode if key is not kept pressed
-        lastmove = ' ';
-      }
+      readInputDefault(ch, lastmove);
       break;
 
   } // switch
