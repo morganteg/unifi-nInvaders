@@ -1,0 +1,60 @@
+File selection set to All files
+
+Selected Files:
+
+
+Selected Checks:
+
+
+Beginning Automatic Ignores Phase: venerdì 10 settembre 2021 09:13:24 CEST
+Ending Automatic Ignores Phase: venerdì 10 settembre 2021 09:13:24 CEST
+Begining File Inclusion Phase: venerdì 10 settembre 2021 09:13:24 CEST
+Ending File Inclusion Phase: venerdì 10 settembre 2021 09:13:24 CEST
+Begin Duration: venerdì 10 settembre 2021 09:13:24 CEST
+Begin Inspection: venerdì 10 settembre 2021 09:13:24 CEST
+Begin Global Check Phase
+Global: 5.1 External identifiers shall be distinct - MISRA12_5.1: Violations found
+Project Violations: 39
+Global: 5.6 A typedef name shall be a unique identifier - MISRA12_5.6: Violations found
+Project Violations: 39
+Global: 5.7 A tag name shall be a unique identifier - MISRA12_5.7: Violations found
+Project Violations: 39
+Global: 5.8 Identifiers that define objects or functions with external linkage shall be unique - MISRA12_5.8: Violations found
+Project Violations: 49
+Global: 5.9 Identifiers that define objects or functions with internal linkage should be unique - MISRA12_5.9: Violations found
+Project Violations: 52
+Global: 8.3 All declarations of an object or function shall use the same names and type qualifiers - MISRA12_8.3: Violations found
+Project Violations: 56
+Global: 8.5 An external object or function shall be declared once in one and only one file - MISRA12_8.5: Violations found
+Project Violations: 78
+Global: 8.6 ( Strict | Special ) An identifier with external linkage shall have exactly one external definition - MISRA12_8.6: Violations found
+Project Violations: 113
+Global: 8.7 Functions and objects should not be defined with external linkage if they are referenced in only one translation unit - MISRA12_8.7: Violations found
+Project Violations: 142
+Global: 8.8 The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage - MISRA12_8.8: Violations found
+End Global Check Phase
+Begin File Check Phase
+Project Violations: 163
+File: unifi-nInvaders/nInvaders.h: Violations found
+File: unifi-nInvaders/aliens.c: Violations found
+File: unifi-nInvaders/player.c: Violations found
+File: unifi-nInvaders/view.c: Violations found
+File: unifi-nInvaders/ufo.c: Violations found
+File: unifi-nInvaders/aliens.h: Violations found
+File: unifi-nInvaders/player.h: Violations found
+File: unifi-nInvaders/view.h: Violations found
+File: unifi-nInvaders/ufo.h: Violations found
+File: unifi-nInvaders/globals.c: Violations found
+File: unifi-nInvaders/nInvaders.c: Violations found
+File: unifi-nInvaders/globals.h: Violations found
+End File Check Phase
+End Inspection: venerdì 10 settembre 2021 09:13:31 CEST
+End Duration: 7 seconds
+ 
+Inspection Summary:
+Files: 12
+Checks: 85
+Violations Found: 1080
+Violations Ignored: 6
+Violations Remaining: 1074
+ 

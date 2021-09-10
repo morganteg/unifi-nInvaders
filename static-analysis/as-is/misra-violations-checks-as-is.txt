@@ -1,0 +1,1223 @@
+Results	Entity	CheckID	Line	Column	Ignored	Note
+Number of Results: 1074						
+  Published Standards						
+    MISRA C 2012						
+      3.1 The character sequences 						
+        * and 						
+          						
+            3.1 The character sequences /* and // shall not be used within a comment - MISRA12_3.1 -- 3.1 ( Required ) The character sequences /* and // shall not be used within a comment.						
+              /home/gabriele/projects/unifi-nInvaders/aliens.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/aliens.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/globals.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/globals.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/player.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/player.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/ufo.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/ufo.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/view.c						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+              /home/gabriele/projects/unifi-nInvaders/view.h						
+                Character sequence /* or // used in a comment		MISRA12_3.1	1	0		
+      13.3 A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator - MISRA12_13.3 -- 13.3 ( Advisory ) A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Improper '++' declaration.		MISRA12_13.3	222	23		
+          Improper '++' declaration.		MISRA12_13.3	272	42		
+          Improper '++' declaration.		MISRA12_13.3	273	42		
+          Improper '++' declaration.		MISRA12_13.3	274	42		
+          Improper '++' declaration.		MISRA12_13.3	275	39		
+          Improper '++' declaration.		MISRA12_13.3	303	46		
+      15.6 The body of an iteration-statement or a selection-statement shall be a compound-statement - MISRA12_15.6 -- 15.6 ( Required ) The body of an iteration-statement or a selection-statement shall be a compound-statement.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.c						
+          Iteration-statement or selection-statement not a compound-statement	bunkersReset	MISRA12_15.6	97	24		
+          Iteration-statement or selection-statement not a compound-statement	bunkersReset	MISRA12_15.6	99	24		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	103	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	105	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	107	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	109	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	111	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	113	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	115	8		
+          Iteration-statement or selection-statement not a compound-statement	finish	MISRA12_15.6	117	8		
+      15.7 All if … else if constructs shall be terminated with an else statement - MISRA12_15.7 -- 15.7 ( Required ) All if … else if constructs shall be terminated with an else statement.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Else If with no following Else	finish	MISRA12_15.7	120	8		
+          Else If with no following Else	readInput	MISRA12_15.7	161	16		
+      16.3 An unconditional break statement shall terminate every switch-clause - MISRA12_16.3 -- 16.3 (Required) An unconditional break statement shall terminate every non-empty switch-clause.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Unconditional throw or break statement does not terminate non-empty switch-clause.	readInput	MISRA12_16.3	175	24		
+          Unconditional throw or break statement does not terminate non-empty switch-clause.	handleTimer	MISRA12_16.3	235	16		
+      16.4 Every switch statement shall have a default label - MISRA12_16.4 -- 16.4 ( Required ) Every switch statement shall have a default label.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Switch Incorrect: No default case	handleTimer	MISRA12_16.4	306	8		
+      17.7 The value returned by a function having non-void return type shall be used - MISRA12_17.7 -- 17.7 ( Required ) The value returned by a function having non-void return type shall be used.						
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Discarded Return Values	doSleep	MISRA12_17.7	46	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	55	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	56	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	57	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	58	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	59	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	60	8		
+          Discarded Return Values	showVersion	MISRA12_17.7	61	8		
+          Discarded Return Values	showUsage	MISRA12_17.7	71	8		
+          Discarded Return Values	showUsage	MISRA12_17.7	72	8		
+          Discarded Return Values	showUsage	MISRA12_17.7	73	8		
+          Discarded Return Values	showUsage	MISRA12_17.7	74	8		
+          Discarded Return Values	showUsage	MISRA12_17.7	75	8		
+          Discarded Return Values	waitForReturn	MISRA12_17.7	85	8		
+          Discarded Return Values	waitForReturn	MISRA12_17.7	86	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	94	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	95	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	96	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	97	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	98	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	99	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	100	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	101	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	102	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	103	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	104	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	105	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	106	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	107	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	108	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	109	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	110	8		
+          Discarded Return Values	showGplShort	MISRA12_17.7	111	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	119	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	120	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	121	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	122	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	123	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	124	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	125	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	126	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	127	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	128	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	129	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	130	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	131	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	132	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	133	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	134	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	135	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	136	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	137	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	138	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	139	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	140	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	141	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	142	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	143	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	147	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	148	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	149	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	150	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	151	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	152	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	153	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	154	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	155	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	156	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	157	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	158	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	159	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	160	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	161	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	162	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	163	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	164	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	165	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	166	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	167	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	168	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	169	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	170	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	174	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	175	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	176	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	177	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	178	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	179	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	180	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	181	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	182	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	183	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	184	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	185	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	186	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	187	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	188	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	189	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	190	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	191	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	192	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	193	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	194	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	195	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	196	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	197	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	198	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	202	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	203	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	204	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	205	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	206	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	207	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	208	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	209	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	210	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	211	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	212	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	213	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	214	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	215	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	216	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	217	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	218	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	219	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	220	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	221	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	222	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	223	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	224	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	225	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	226	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	230	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	231	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	232	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	233	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	234	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	235	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	236	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	237	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	238	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	239	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	240	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	241	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	242	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	243	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	244	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	245	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	246	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	247	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	248	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	249	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	250	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	251	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	252	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	253	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	254	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	258	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	259	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	260	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	261	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	262	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	263	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	264	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	265	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	266	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	267	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	268	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	269	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	270	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	271	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	272	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	273	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	274	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	275	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	276	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	277	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	278	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	279	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	280	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	281	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	282	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	286	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	287	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	288	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	289	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	290	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	291	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	292	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	293	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	294	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	295	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	296	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	297	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	298	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	299	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	300	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	301	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	302	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	303	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	304	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	305	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	306	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	307	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	308	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	309	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	310	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	314	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	315	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	316	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	317	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	318	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	319	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	320	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	321	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	322	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	323	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	324	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	325	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	326	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	327	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	328	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	329	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	330	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	331	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	332	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	333	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	334	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	335	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	336	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	337	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	338	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	342	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	343	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	344	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	345	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	346	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	347	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	348	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	349	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	350	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	351	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	352	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	353	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	354	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	355	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	356	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	357	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	358	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	359	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	360	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	361	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	362	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	363	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	364	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	365	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	366	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	370	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	371	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	372	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	373	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	374	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	375	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	376	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	377	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	378	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	379	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	380	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	381	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	382	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	383	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	384	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	385	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	386	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	387	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	388	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	389	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	390	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	391	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	392	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	393	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	394	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	398	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	399	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	400	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	401	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	402	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	403	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	404	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	405	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	406	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	407	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	408	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	409	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	410	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	411	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	412	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	413	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	414	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	415	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	416	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	417	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	418	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	419	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	420	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	421	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	422	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	426	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	427	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	428	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	429	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	430	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	431	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	432	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	433	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	434	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	435	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	436	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	437	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	438	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	439	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	440	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	441	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	442	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	443	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	444	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	445	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	446	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	447	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	448	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	449	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	450	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	454	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	455	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	456	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	457	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	458	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	459	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	460	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	461	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	462	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	463	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	464	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	465	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	466	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	467	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	468	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	469	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	470	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	471	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	472	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	473	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	474	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	475	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	476	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	477	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	478	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	482	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	483	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	484	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	485	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	486	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	487	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	488	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	489	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	490	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	491	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	492	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	493	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	494	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	495	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	496	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	497	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	498	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	499	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	500	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	501	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	502	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	503	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	504	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	505	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	506	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	510	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	511	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	512	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	513	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	514	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	515	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	516	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	517	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	518	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	519	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	520	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	521	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	522	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	523	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	524	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	525	8		
+          Discarded Return Values	showGpl	MISRA12_17.7	526	8		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Discarded Return Values	finish	MISRA12_17.7	94	8		
+          Discarded Return Values	finish	MISRA12_17.7	97	8		
+          Discarded Return Values	finish	MISRA12_17.7	98	8		
+          Discarded Return Values	finish	MISRA12_17.7	99	8		
+          Discarded Return Values	finish	MISRA12_17.7	100	8		
+          Discarded Return Values	finish	MISRA12_17.7	102	8		
+          Discarded Return Values	finish	MISRA12_17.7	104	16		
+          Discarded Return Values	finish	MISRA12_17.7	106	16		
+          Discarded Return Values	finish	MISRA12_17.7	108	16		
+          Discarded Return Values	finish	MISRA12_17.7	110	16		
+          Discarded Return Values	finish	MISRA12_17.7	112	16		
+          Discarded Return Values	finish	MISRA12_17.7	114	16		
+          Discarded Return Values	finish	MISRA12_17.7	116	16		
+          Discarded Return Values	finish	MISRA12_17.7	118	16		
+          Discarded Return Values	setUpTimer	MISRA12_17.7	321	8		
+          Discarded Return Values	setUpTimer	MISRA12_17.7	325	8		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Discarded Return Values	playerInit	MISRA12_17.7	59	8		
+          Discarded Return Values	playerInit	MISRA12_17.7	60	8		
+          Discarded Return Values	playerDisplay	MISRA12_17.7	70	8		
+          Discarded Return Values	playerClear	MISRA12_17.7	79	8		
+          Discarded Return Values	playerMissileInit	MISRA12_17.7	89	8		
+          Discarded Return Values	playerMissileInit	MISRA12_17.7	90	8		
+          Discarded Return Values	playerMissileInit	MISRA12_17.7	91	8		
+          Discarded Return Values	playerMissileInit	MISRA12_17.7	92	8		
+          Discarded Return Values	playerMissileDisplay	MISRA12_17.7	101	8		
+          Discarded Return Values	playerMissileClear	MISRA12_17.7	110	8		
+          Discarded Return Values	playerExplosionDisplay	MISRA12_17.7	124	8		
+          Discarded Return Values	playerExplosionDisplay	MISRA12_17.7	127	16		
+          Discarded Return Values	playerExplosionDisplay	MISRA12_17.7	129	24		
+          Discarded Return Values	playerExplosionDisplay	MISRA12_17.7	132	16		
+          Discarded Return Values	playerExplosionDisplay	MISRA12_17.7	133	16		
+          Discarded Return Values	aliensInit	MISRA12_17.7	147	8		
+          Discarded Return Values	aliensDisplay	MISRA12_17.7	156	8		
+          Discarded Return Values	aliensClear	MISRA12_17.7	165	8		
+          Discarded Return Values	aliensMissileInit	MISRA12_17.7	175	8		
+          Discarded Return Values	aliensMissileInit	MISRA12_17.7	176	8		
+          Discarded Return Values	aliensMissileInit	MISRA12_17.7	177	8		
+          Discarded Return Values	aliensMissileDisplay	MISRA12_17.7	186	8		
+          Discarded Return Values	aliensMissileClear	MISRA12_17.7	195	8		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	214	8		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	215	8		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	226	40		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	227	40		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	228	40		
+          Discarded Return Values	aliensRefresh	MISRA12_17.7	229	40		
+          Discarded Return Values	bunkersInit	MISRA12_17.7	252	8		
+          Discarded Return Values	bunkersDisplay	MISRA12_17.7	263	8		
+          Discarded Return Values	bunkersDisplay	MISRA12_17.7	264	8		
+          Discarded Return Values	bunkersDisplay	MISRA12_17.7	268	32		
+          Discarded Return Values	bunkersDisplay	MISRA12_17.7	270	32		
+          Discarded Return Values	bunkersDisplay	MISRA12_17.7	275	8		
+          Discarded Return Values	bunkersClear	MISRA12_17.7	284	8		
+          Discarded Return Values	bunkersClearElement	MISRA12_17.7	293	8		
+          Discarded Return Values	ufoRefresh	MISRA12_17.7	305	8		
+          Discarded Return Values	ufoRefresh	MISRA12_17.7	306	8		
+          Discarded Return Values	ufoInit	MISRA12_17.7	319	8		
+          Discarded Return Values	ufoInit	MISRA12_17.7	320	8		
+          Discarded Return Values	ufoDisplay	MISRA12_17.7	329	8		
+          Discarded Return Values	ufoClear	MISRA12_17.7	338	8		
+          Discarded Return Values	gameOverInit	MISRA12_17.7	349	8		
+          Discarded Return Values	gameOverInit	MISRA12_17.7	350	8		
+          Discarded Return Values	gameOverDisplay	MISRA12_17.7	373	8		
+          Discarded Return Values	gameOverDisplay	MISRA12_17.7	374	8		
+          Discarded Return Values	titleScreenInit	MISRA12_17.7	384	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	410	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	411	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	419	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	420	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	421	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	432	16		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	433	16		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	438	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	439	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	444	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	448	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	452	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	454	8		
+          Discarded Return Values	titleScreenDisplay	MISRA12_17.7	456	8		
+          Discarded Return Values	statusInit	MISRA12_17.7	475	8		
+          Discarded Return Values	statusDisplay	MISRA12_17.7	494	8		
+          Discarded Return Values	statusDisplay	MISRA12_17.7	496	8		
+          Discarded Return Values	statusDisplay	MISRA12_17.7	497	8		
+          Discarded Return Values	statusDisplay	MISRA12_17.7	505	8		
+          Discarded Return Values	battleFieldInit	MISRA12_17.7	517	8		
+          Discarded Return Values	battleFieldInit	MISRA12_17.7	520	8		
+          Discarded Return Values	battleFieldInit	MISRA12_17.7	521	8		
+          Discarded Return Values	battleFieldClear	MISRA12_17.7	530	8		
+          Discarded Return Values	refreshScreen	MISRA12_17.7	540	8		
+          Discarded Return Values	finish	MISRA12_17.7	550	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	562	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	566	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	567	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	568	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	569	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	570	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	571	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	572	8		
+          Discarded Return Values	graphicEngineInit	MISRA12_17.7	573	8		
+      17.8 A function parameter should not be modified - MISRA12_17.8 -- 17.8 ( Advisory ) A function parameter should not be modified.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Parameter argc is modified	evaluateCommandLine	MISRA12_17.8	74	24		
+      2.5 A project should not contain unused macro declarations - MISRA12_2.5 -- 2.5 ( Advisory ) A project should not contain unused macro declarations.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Unused macro declaration RED_ALIEN_TYPE	RED_ALIEN_TYPE	MISRA12_2.5	35	8		
+          Unused macro declaration GREEN_ALIEN_TYPE	GREEN_ALIEN_TYPE	MISRA12_2.5	36	8		
+          Unused macro declaration BLUE_ALIEN_TYPE	BLUE_ALIEN_TYPE	MISRA12_2.5	37	8		
+      2.7 There should be no unused parameters in functions - MISRA12_2.7 -- 2.7 ( Advisory ) There should be no unused parameters in functions.						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Unused unused parameter sig	sig	MISRA12_2.7	92	23		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Unused unused parameter sig	sig	MISRA12_2.7	548	23		
+      21.10 The Standard Library time and date functions shall not be used - MISRA12_21.10 -- 21.10 (Required) The Standard Library time and date functions shall not be used						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          time.h used 	stdio.h	MISRA12_21.10	25	0	Ignored	
+      21.5 The standard header file <signal.h> shall not be used - MISRA12_21.5 -- 21.5 (Required) The standard header file <signal.h> shall not be used						
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          header file signal.h used.	view.c	MISRA12_21.5	29	0	Ignored	
+        /home/gabriele/projects/unifi-nInvaders/view.h						
+          header file signal.h used.	view.h	MISRA12_21.5	27	0	Ignored	
+      21.8 The library functions abort, exit, getenv and system of <stdlib.h> shall not be used - MISRA12_21.8 -- 21.8 (Required) The library functions abort, exit, getenv and system of <stdlib.h> shall not be used						
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          cstdlib function exit used in file nInvaders.c	exit	MISRA12_21.8	87	16		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          cstdlib function exit used in file view.c	exit	MISRA12_21.8	551	8	Ignored	
+      5.1 External identifiers shall be distinct - MISRA12_5.1 -- 5.1 (Global)( Required ) External identifiers shall be distinct.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Non distinct external identifier Aliens conflicts with entity Aliens in file aliens.h	Aliens	MISRA12_5.1	30	15		
+          Non distinct external identifier aliens conflicts with entity alienshotnum in file aliens.h	aliens	MISRA12_5.1	41	7		
+          Non distinct external identifier aliens conflicts with entity alienshotx in file aliens.h	aliens	MISRA12_5.1	41	7		
+          Non distinct external identifier aliens conflicts with entity alienshoty in file aliens.h	aliens	MISRA12_5.1	41	7		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Non distinct external identifier showGpl conflicts with entity showGplShort in file globals.c	showGpl	MISRA12_5.1	117	5		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Non distinct external identifier Player conflicts with entity Player in file player.c	Player	MISRA12_5.1	30	15		
+          Non distinct external identifier playerHitCheck conflicts with entity playerClear in file view.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerDisplay in file view.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerExplosionDisplay in file view.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMissileClear in file view.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMissileDisplay in file view.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerExplode in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerLaunchMissile in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMoveLeft in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMoveMissile in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMoveRight in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerReset in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerTurboOff in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerTurboOn in file player.c	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerInit in file player.h	playerHitCheck	MISRA12_5.1	130	4		
+          Non distinct external identifier playerHitCheck conflicts with entity playerMissileInit in file player.h	playerHitCheck	MISRA12_5.1	130	4		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Non distinct external identifier Ufo conflicts with entity Ufo in file ufo.h	Ufo	MISRA12_5.1	30	15		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Non distinct external identifier wAliens conflicts with entity wAliensMissile in file view.c	wAliens	MISRA12_5.1	45	8		
+          Non distinct external identifier wPlayer conflicts with entity wPlayerMissile in file view.c	wPlayer	MISRA12_5.1	43	8		
+          Non distinct external identifier aliensClear conflicts with entity aliensDisplay in file view.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensMissileClear in file view.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensMissileDisplay in file view.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensRefresh in file view.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensHitCheck in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensMissileMove in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensMove in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier aliensClear conflicts with entity aliensReset in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+          Non distinct external identifier bunkersClear conflicts with entity bunkersHitCheck in file aliens.c	bunkersClear	MISRA12_5.1	282	5		
+          Non distinct external identifier bunkersClear conflicts with entity bunkersDisplay in file view.c	bunkersClear	MISRA12_5.1	282	5		
+          Non distinct external identifier bunkersClear conflicts with entity bunkersReset in file aliens.c	bunkersClear	MISRA12_5.1	282	5		
+          Non distinct external identifier bunkersClear conflicts with entity bunkersClearElement in file view.c	bunkersClear	MISRA12_5.1	282	5		
+          Non distinct external identifier bunkersClear conflicts with entity bunkersRefresh in file aliens.h	bunkersClear	MISRA12_5.1	282	5		
+          Non distinct external identifier titleScreenClear conflicts with entity titleScreenDisplay in file view.c	titleScreenClear	MISRA12_5.1	463	5		
+          Non distinct external identifier statusDisplay conflicts with entity statusInit in file view.c	statusDisplay	MISRA12_5.1	482	5		
+      5.3 An identifier declared in an inner scope shall not hide an identifier declared in an outer scope - MISRA12_5.3 -- 5.3 ( Required ) An identifier declared in an inner scope shall not hide an identifier declared in an outer scope.						
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Identifier ""wAliens"" possibly hiding outer definition from line 45	wAliens	MISRA12_5.3	397	16		
+      5.8 Identifiers that define objects or functions with external linkage shall be unique - MISRA12_5.8 -- 5.8 (Global)( Required ) Identifiers that define objects or functions with external linkage shall be unique.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.c						
+          Non unique external identifier level conflicts with entity level in file nInvaders.h on line 50	level	MISRA12_5.8	37	12		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Non unique external identifier level conflicts with entity level in file nInvaders.h on line 50	level	MISRA12_5.8	202	23		
+          Non unique external identifier ufo conflicts with entity ufo in file ufo.h on line 37	ufo	MISRA12_5.8	302	13		
+          Non unique external identifier wAliens conflicts with entity wAliens in file view.c on line 45	wAliens	MISRA12_5.8	397	16		
+          Non unique external identifier ufo conflicts with entity ufo in file ufo.h on line 37	ufo	MISRA12_5.8	399	13		
+          Non unique external identifier aliens conflicts with entity aliens in file aliens.h on line 41	aliens	MISRA12_5.8	400	13		
+          Non unique external identifier score conflicts with entity score in file nInvaders.c on line 36	score	MISRA12_5.8	404	12		
+          Non unique external identifier level conflicts with entity level in file nInvaders.h on line 50	level	MISRA12_5.8	482	23		
+          Non unique external identifier lives conflicts with entity lives in file nInvaders.c on line 35	lives	MISRA12_5.8	482	45		
+          Non unique external identifier score conflicts with entity score in file nInvaders.c on line 36	score	MISRA12_5.8	482	34		
+      5.9 Identifiers that define objects or functions with internal linkage should be unique - MISRA12_5.9 -- 5.9 (Global)( Advisory ) Identifiers that define objects or functions with internal linkage should be unique.						
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Non unique internal identifier playerInit conflicts with entity playerInit in file view.c on line 56	playerInit	MISRA12_5.9	43	12		
+          Non unique internal identifier playerMissileInit conflicts with entity playerMissileInit in file view.c on line 86	playerMissileInit	MISRA12_5.9	46	12		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Non unique internal identifier finish conflicts with entity finish in file nInvaders.c on line 92	finish	MISRA12_5.9	548	12		
+      8.2 Function types shall be in prototype form with named parameters - MISRA12_8.2 -- 8.2 ( Required ) Function types shall be in prototype form with named parameters.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.c						
+          Keyword ""void"" not used to denote empty parameter list for function aliensReset	aliensReset	MISRA12_8.2	32	5		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersReset	bunkersReset	MISRA12_8.2	79	5		
+          Keyword ""void"" not used to denote empty parameter list for function aliensMove	aliensMove	MISRA12_8.2	112	4		
+          Keyword ""void"" not used to denote empty parameter list for function render	render	MISRA12_8.2	156	5		
+          Keyword ""void"" not used to denote empty parameter list for function aliensMissileMove	aliensMissileMove	MISRA12_8.2	199	4		
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Keyword ""void"" not used to denote empty parameter list for function aliensReset	aliensReset	MISRA12_8.2	59	5		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersReset	bunkersReset	MISRA12_8.2	60	5		
+          Keyword ""void"" not used to denote empty parameter list for function aliensMove	aliensMove	MISRA12_8.2	61	4		
+          Keyword ""void"" not used to denote empty parameter list for function aliensMissileMove	aliensMissileMove	MISRA12_8.2	62	4		
+          Keyword ""void"" not used to denote empty parameter list for function render	render	MISRA12_8.2	63	5		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersClear	bunkersClear	MISRA12_8.2	75	12		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersRefresh	bunkersRefresh	MISRA12_8.2	76	12		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Keyword ""void"" not used to denote empty parameter list for function showVersion	showVersion	MISRA12_8.2	53	5		
+          Keyword ""void"" not used to denote empty parameter list for function showUsage	showUsage	MISRA12_8.2	68	5		
+          Keyword ""void"" not used to denote empty parameter list for function waitForReturn	waitForReturn	MISRA12_8.2	82	5		
+          Keyword ""void"" not used to denote empty parameter list for function showGplShort	showGplShort	MISRA12_8.2	92	5		
+          Keyword ""void"" not used to denote empty parameter list for function showGpl	showGpl	MISRA12_8.2	117	5		
+        /home/gabriele/projects/unifi-nInvaders/globals.h						
+          Improper parameter format for function doSleep; each parameter must have a type and a name	doSleep	MISRA12_8.2	28	12		
+          Keyword ""void"" not used to denote empty parameter list for function showUsage	showUsage	MISRA12_8.2	30	12		
+          Keyword ""void"" not used to denote empty parameter list for function showVersion	showVersion	MISRA12_8.2	31	12		
+          Keyword ""void"" not used to denote empty parameter list for function showGplShort	showGplShort	MISRA12_8.2	32	12		
+          Keyword ""void"" not used to denote empty parameter list for function showGpl	showGpl	MISRA12_8.2	33	12		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Keyword ""void"" not used to denote empty parameter list for function initLevel	initLevel	MISRA12_8.2	52	12		
+          Keyword ""void"" not used to denote empty parameter list for function drawscore	drawscore	MISRA12_8.2	125	5		
+          Keyword ""void"" not used to denote empty parameter list for function readInput	readInput	MISRA12_8.2	134	5		
+          Keyword ""void"" not used to denote empty parameter list for function handleTimer	handleTimer	MISRA12_8.2	209	5		
+          Keyword ""void"" not used to denote empty parameter list for function setUpTimer	setUpTimer	MISRA12_8.2	313	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Keyword ""void"" not used to denote empty parameter list for function drawscore	drawscore	MISRA12_8.2	44	5		
+          Improper parameter format for function doSleep; each parameter must have a type and a name	doSleep	MISRA12_8.2	54	12		
+          Keyword ""void"" not used to denote empty parameter list for function showUsage	showUsage	MISRA12_8.2	55	12		
+          Keyword ""void"" not used to denote empty parameter list for function showVersion	showVersion	MISRA12_8.2	56	12		
+          Keyword ""void"" not used to denote empty parameter list for function showGplShort	showGplShort	MISRA12_8.2	57	12		
+          Keyword ""void"" not used to denote empty parameter list for function showGpl	showGpl	MISRA12_8.2	58	12		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Keyword ""void"" not used to denote empty parameter list for function playerReset	playerReset	MISRA12_8.2	46	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveLeft	playerMoveLeft	MISRA12_8.2	80	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveRight	playerMoveRight	MISRA12_8.2	96	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerTurboOn	playerTurboOn	MISRA12_8.2	112	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerTurboOff	playerTurboOff	MISRA12_8.2	121	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerLaunchMissile	playerLaunchMissile	MISRA12_8.2	149	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerReloadMissile	playerReloadMissile	MISRA12_8.2	163	12		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveMissile	playerMoveMissile	MISRA12_8.2	173	4		
+          Keyword ""void"" not used to denote empty parameter list for function playerExplode	playerExplode	MISRA12_8.2	237	5		
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Keyword ""void"" not used to denote empty parameter list for function playerReset	playerReset	MISRA12_8.2	31	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveLeft	playerMoveLeft	MISRA12_8.2	33	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveRight	playerMoveRight	MISRA12_8.2	34	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerTurboOn	playerTurboOn	MISRA12_8.2	35	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerTurboOff	playerTurboOff	MISRA12_8.2	36	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerLaunchMissile	playerLaunchMissile	MISRA12_8.2	38	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerMoveMissile	playerMoveMissile	MISRA12_8.2	39	4		
+          Keyword ""void"" not used to denote empty parameter list for function playerExplode	playerExplode	MISRA12_8.2	40	5		
+          Keyword ""void"" not used to denote empty parameter list for function playerInit	playerInit	MISRA12_8.2	43	12		
+          Keyword ""void"" not used to denote empty parameter list for function playerMissileInit	playerMissileInit	MISRA12_8.2	46	12		
+        /home/gabriele/projects/unifi-nInvaders/ufo.c						
+          Keyword ""void"" not used to denote empty parameter list for function ufoReset	ufoReset	MISRA12_8.2	34	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoMoveLeft	ufoMoveLeft	MISRA12_8.2	58	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoShowUfo	ufoShowUfo	MISRA12_8.2	73	4		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Keyword ""void"" not used to denote empty parameter list for function ufoReset	ufoReset	MISRA12_8.2	39	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoShowUfo	ufoShowUfo	MISRA12_8.2	40	4		
+          Keyword ""void"" not used to denote empty parameter list for function ufoMoveLeft	ufoMoveLeft	MISRA12_8.2	41	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoRefresh	ufoRefresh	MISRA12_8.2	46	12		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Keyword ""void"" not used to denote empty parameter list for function playerInit	playerInit	MISRA12_8.2	56	12		
+          Keyword ""void"" not used to denote empty parameter list for function playerMissileInit	playerMissileInit	MISRA12_8.2	86	12		
+          Keyword ""void"" not used to denote empty parameter list for function aliensInit	aliensInit	MISRA12_8.2	144	12		
+          Keyword ""void"" not used to denote empty parameter list for function aliensMissileInit	aliensMissileInit	MISRA12_8.2	172	12		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersInit	bunkersInit	MISRA12_8.2	249	12		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersClear	bunkersClear	MISRA12_8.2	282	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoRefresh	ufoRefresh	MISRA12_8.2	300	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoInit	ufoInit	MISRA12_8.2	316	12		
+          Keyword ""void"" not used to denote empty parameter list for function gameOverInit	gameOverInit	MISRA12_8.2	345	12		
+          Keyword ""void"" not used to denote empty parameter list for function gameOverDisplay	gameOverDisplay	MISRA12_8.2	369	5		
+          Keyword ""void"" not used to denote empty parameter list for function titleScreenInit	titleScreenInit	MISRA12_8.2	381	12		
+          Keyword ""void"" not used to denote empty parameter list for function titleScreenDisplay	titleScreenDisplay	MISRA12_8.2	391	5		
+          Keyword ""void"" not used to denote empty parameter list for function titleScreenClear	titleScreenClear	MISRA12_8.2	463	5		
+          Keyword ""void"" not used to denote empty parameter list for function statusInit	statusInit	MISRA12_8.2	472	5		
+          Keyword ""void"" not used to denote empty parameter list for function battleFieldInit	battleFieldInit	MISRA12_8.2	514	12		
+          Keyword ""void"" not used to denote empty parameter list for function battleFieldClear	battleFieldClear	MISRA12_8.2	528	5		
+          Keyword ""void"" not used to denote empty parameter list for function refreshScreen	refreshScreen	MISRA12_8.2	537	5		
+          Keyword ""void"" not used to denote empty parameter list for function graphicEngineInit	graphicEngineInit	MISRA12_8.2	558	5		
+        /home/gabriele/projects/unifi-nInvaders/view.h						
+          Keyword ""void"" not used to denote empty parameter list for function graphicEngineInit	graphicEngineInit	MISRA12_8.2	52	5		
+          Keyword ""void"" not used to denote empty parameter list for function battleFieldClear	battleFieldClear	MISRA12_8.2	59	5		
+          Keyword ""void"" not used to denote empty parameter list for function bunkersClear	bunkersClear	MISRA12_8.2	60	5		
+          Keyword ""void"" not used to denote empty parameter list for function gameOverDisplay	gameOverDisplay	MISRA12_8.2	63	5		
+          Keyword ""void"" not used to denote empty parameter list for function titleScreenClear	titleScreenClear	MISRA12_8.2	69	5		
+          Keyword ""void"" not used to denote empty parameter list for function titleScreenDisplay	titleScreenDisplay	MISRA12_8.2	70	5		
+          Keyword ""void"" not used to denote empty parameter list for function ufoRefresh	ufoRefresh	MISRA12_8.2	73	5		
+          Keyword ""void"" not used to denote empty parameter list for function refreshScreen	refreshScreen	MISRA12_8.2	76	5		
+      8.3 All declarations of an object or function shall use the same names and type qualifiers - MISRA12_8.3 -- 8.3 (Global)( Required ) All declarations of an object or function shall use the same names and type qualifiers.						
+        /home/gabriele/projects/unifi-nInvaders/globals.h						
+          Declaration or Definition of doSleep is not compatible with another declaration or definition in file globals.c on line 44	doSleep	MISRA12_8.3	28	12		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Declaration or Definition of main is not compatible with another declaration or definition in file nInvaders.c on line 329	main	MISRA12_8.3	39	4		
+          Declaration or Definition of render is not compatible with another declaration or definition in file aliens.c on line 156	render	MISRA12_8.3	41	12		
+          Declaration or Definition of doSleep is not compatible with another declaration or definition in file globals.c on line 44	doSleep	MISRA12_8.3	54	12		
+      8.4 A compatible declaration shall be visible when an object or function with external linkage is defined - MISRA12_8.4 -- 8.4 ( Required ) A compatible declaration shall be visible when an object or function with external linkage is defined.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Object or function aliens, has external linkage but no visible declaration	aliens	MISRA12_8.4	41	7		
+          Object or function shipnum, has external linkage but no visible declaration	shipnum	MISRA12_8.4	43	4		
+          Object or function lowest_ship, has external linkage but no visible declaration	lowest_ship	MISRA12_8.4	50	4		
+          Object or function alienshotx, has external linkage but no visible declaration	alienshotx	MISRA12_8.4	51	4		
+          Object or function alienshoty, has external linkage but no visible declaration	alienshoty	MISRA12_8.4	52	4		
+          Object or function alienshotnum, has external linkage but no visible declaration	alienshotnum	MISRA12_8.4	53	4		
+          Object or function alienBlock, has external linkage but no visible declaration	alienBlock	MISRA12_8.4	54	4		
+          Object or function bunker, has external linkage but no visible declaration	bunker	MISRA12_8.4	56	4		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Object or function waitForReturn, has external linkage but no visible declaration	waitForReturn	MISRA12_8.4	82	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Object or function lives, has external linkage but no visible declaration	lives	MISRA12_8.4	35	4		
+          Object or function score, has external linkage but no visible declaration	score	MISRA12_8.4	36	5		
+          Object or function status, has external linkage but no visible declaration	status	MISRA12_8.4	37	4		
+          Object or function readInput, has external linkage but no visible declaration	readInput	MISRA12_8.4	134	5		
+          Object or function handleTimer, has external linkage but no visible declaration	handleTimer	MISRA12_8.4	209	5		
+          Object or function setUpTimer, has external linkage but no visible declaration	setUpTimer	MISRA12_8.4	313	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Object or function weite, has external linkage but no visible declaration	weite	MISRA12_8.4	49	4		
+          Object or function level, has external linkage but no visible declaration	level	MISRA12_8.4	50	4		
+          Object or function skill_level, has external linkage but no visible declaration	skill_level	MISRA12_8.4	51	4		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Object or function player, has external linkage but no visible declaration	player	MISRA12_8.4	41	7		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Object or function ufo, has external linkage but no visible declaration	ufo	MISRA12_8.4	37	4		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Object or function wBattleField, has external linkage but no visible declaration	wBattleField	MISRA12_8.4	39	8		
+          Object or function wEmpty, has external linkage but no visible declaration	wEmpty	MISRA12_8.4	40	8		
+          Object or function wScores, has external linkage but no visible declaration	wScores	MISRA12_8.4	41	8		
+          Object or function wPlayer, has external linkage but no visible declaration	wPlayer	MISRA12_8.4	43	8		
+          Object or function wPlayerMissile, has external linkage but no visible declaration	wPlayerMissile	MISRA12_8.4	44	8		
+          Object or function wAliens, has external linkage but no visible declaration	wAliens	MISRA12_8.4	45	8		
+          Object or function wAliensMissile, has external linkage but no visible declaration	wAliensMissile	MISRA12_8.4	46	8		
+          Object or function wBunkers, has external linkage but no visible declaration	wBunkers	MISRA12_8.4	47	8		
+          Object or function wGameOver, has external linkage but no visible declaration	wGameOver	MISRA12_8.4	48	8		
+          Object or function wUfo, has external linkage but no visible declaration	wUfo	MISRA12_8.4	49	8		
+          Object or function wStatus, has external linkage but no visible declaration	wStatus	MISRA12_8.4	50	8		
+          Object or function wTitleScreen, has external linkage but no visible declaration	wTitleScreen	MISRA12_8.4	51	8		
+          Object or function statusInit, has external linkage but no visible declaration	statusInit	MISRA12_8.4	472	5		
+      8.5 An external object or function shall be declared once in one and only one file - MISRA12_8.5 -- 8.5 (Global)( Required ) An external object or function shall be declared once in one and only one file.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Object or function aliensDisplay, has more than one declaration	aliensDisplay	MISRA12_8.5	69	12		
+          Object or function aliensClear, has more than one declaration	aliensClear	MISRA12_8.5	70	12		
+          Object or function aliensRefresh, has more than one declaration	aliensRefresh	MISRA12_8.5	71	12		
+          Object or function aliensMissileDisplay, has more than one declaration	aliensMissileDisplay	MISRA12_8.5	72	12		
+          Object or function aliensMissileClear, has more than one declaration	aliensMissileClear	MISRA12_8.5	73	12		
+          Object or function bunkersClearElement, has more than one declaration	bunkersClearElement	MISRA12_8.5	74	12		
+          Object or function bunkersClear, has more than one declaration	bunkersClear	MISRA12_8.5	75	12		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Object or function doScoring, has more than one declaration	doScoring	MISRA12_8.5	46	5		
+          Object or function render, has more than one declaration	render	MISRA12_8.5	41	12		
+          Object or function doSleep, has more than one declaration	doSleep	MISRA12_8.5	54	12		
+          Object or function showUsage, has more than one declaration	showUsage	MISRA12_8.5	55	12		
+          Object or function showVersion, has more than one declaration	showVersion	MISRA12_8.5	56	12		
+          Object or function showGplShort, has more than one declaration	showGplShort	MISRA12_8.5	57	12		
+          Object or function showGpl, has more than one declaration	showGpl	MISRA12_8.5	58	12		
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Object or function playerClear, has more than one declaration	playerClear	MISRA12_8.5	45	12		
+          Object or function playerDisplay, has more than one declaration	playerDisplay	MISRA12_8.5	44	12		
+          Object or function playerMissileClear, has more than one declaration	playerMissileClear	MISRA12_8.5	48	12		
+          Object or function playerMissileDisplay, has more than one declaration	playerMissileDisplay	MISRA12_8.5	47	12		
+          Object or function playerExplosionDisplay, has more than one declaration	playerExplosionDisplay	MISRA12_8.5	49	12		
+        /home/gabriele/projects/unifi-nInvaders/view.h						
+          Object or function ufoClear, has more than one declaration	ufoClear	MISRA12_8.5	71	5		
+          Object or function ufoDisplay, has more than one declaration	ufoDisplay	MISRA12_8.5	72	5		
+          Object or function ufoRefresh, has more than one declaration	ufoRefresh	MISRA12_8.5	73	5		
+      8.6 ( Strict | Special ) An identifier with external linkage shall have exactly one external definition - MISRA12_8.6 -- 8.6 (Global)( Required ) An identifier with external linkage shall have exactly one external definition.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.c						
+          Identifier random, does not have a definition	random	MISRA12_8.6	239	38		
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Identifier bunkersRefresh, does not have a definition	bunkersRefresh	MISRA12_8.6	76	12		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Identifier usleep, does not have a definition	usleep	MISRA12_8.6	46	8		
+          Identifier fgets, does not have a definition	fgets	MISRA12_8.6	86	8		
+          Identifier fprintf, does not have a definition	fprintf	MISRA12_8.6	119	8		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Identifier strcmp, does not have a definition	strcmp	MISRA12_8.6	70	25		
+          Identifier wgetch, does not have a definition	wgetch	MISRA12_8.6	139	13		
+          Identifier setitimer, does not have a definition	setitimer	MISRA12_8.6	321	8		
+          Identifier sigaction, does not have a definition	sigaction	MISRA12_8.6	325	8		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Identifier game_over, does not have a definition	game_over	MISRA12_8.6	43	5		
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Identifier playerInit, does not have a definition	playerInit	MISRA12_8.6	43	12		
+          Identifier playerMissileInit, does not have a definition	playerMissileInit	MISRA12_8.6	46	12		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Identifier rand, does not have a definition	rand	MISRA12_8.6	129	69		
+          Identifier newpad, does not have a definition	newpad	MISRA12_8.6	146	18		
+          Identifier wclear, does not have a definition	wclear	MISRA12_8.6	147	8		
+          Identifier wattrset, does not have a definition	wattrset	MISRA12_8.6	176	8		
+          Identifier waddch, does not have a definition	waddch	MISRA12_8.6	177	8		
+          Identifier waddnstr, does not have a definition	waddnstr	MISRA12_8.6	234	40		
+          Identifier wrefresh, does not have a definition	wrefresh	MISRA12_8.6	374	8		
+          Identifier snprintf, does not have a definition	snprintf	MISRA12_8.6	420	8		
+          Identifier sprintf, does not have a definition	sprintf	MISRA12_8.6	494	8		
+          Identifier newwin, does not have a definition	newwin	MISRA12_8.6	519	23		
+          Identifier mvwin, does not have a definition	mvwin	MISRA12_8.6	521	8		
+          Identifier copywin, does not have a definition	copywin	MISRA12_8.6	530	8		
+          Identifier wredrawln, does not have a definition	wredrawln	MISRA12_8.6	539	8		
+          Identifier endwin, does not have a definition	endwin	MISRA12_8.6	550	8		
+          Identifier exit, does not have a definition	exit	MISRA12_8.6	551	8		
+          Identifier signal, does not have a definition	signal	MISRA12_8.6	560	15		
+          Identifier initscr, does not have a definition	initscr	MISRA12_8.6	561	15		
+          Identifier keypad, does not have a definition	keypad	MISRA12_8.6	562	8		
+          Identifier nonl, does not have a definition	nonl	MISRA12_8.6	563	15		
+          Identifier cbreak, does not have a definition	cbreak	MISRA12_8.6	564	15		
+          Identifier noecho, does not have a definition	noecho	MISRA12_8.6	565	15		
+          Identifier start_color, does not have a definition	start_color	MISRA12_8.6	566	8		
+          Identifier init_pair, does not have a definition	init_pair	MISRA12_8.6	567	8		
+      8.7 Functions and objects should not be defined with external linkage if they are referenced in only one translation unit - MISRA12_8.7 -- 8.7 (Global)(Advisory) Functions and objects should not be defined with external linkage if they are referenced in only one translation unit.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Function or object lowest_ship, has external linkage but is only used in the translation unit built from aliens.c.	lowest_ship	MISRA12_8.7	50	4		
+          Function or object alienshotx, has external linkage but is only used in the translation unit built from aliens.c.	alienshotx	MISRA12_8.7	51	4		
+          Function or object alienshoty, has external linkage but is only used in the translation unit built from aliens.c.	alienshoty	MISRA12_8.7	52	4		
+          Function or object alienshotnum, has external linkage but is only used in the translation unit built from aliens.c.	alienshotnum	MISRA12_8.7	53	4		
+          Function or object alienBlock, has external linkage but is only used in the translation unit built from aliens.c.	alienBlock	MISRA12_8.7	54	4		
+          Function or object bunker, has external linkage but is only used in the translation unit built from aliens.c.	bunker	MISRA12_8.7	56	4		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Function or object waitForReturn, has external linkage but is only used in the translation unit built from globals.c.	waitForReturn	MISRA12_8.7	82	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Function or object lives, has external linkage but is only used in the translation unit built from nInvaders.c.	lives	MISRA12_8.7	35	4		
+          Function or object score, has external linkage but is only used in the translation unit built from nInvaders.c.	score	MISRA12_8.7	36	5		
+          Function or object status, has external linkage but is only used in the translation unit built from nInvaders.c.	status	MISRA12_8.7	37	4		
+          Function or object readInput, has external linkage but is only used in the translation unit built from nInvaders.c.	readInput	MISRA12_8.7	134	5		
+          Function or object handleTimer, has external linkage but is only used in the translation unit built from nInvaders.c.	handleTimer	MISRA12_8.7	209	5		
+          Function or object setUpTimer, has external linkage but is only used in the translation unit built from nInvaders.c.	setUpTimer	MISRA12_8.7	313	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Function or object drawscore, has external linkage but is only used in the translation unit built from nInvaders.c.	drawscore	MISRA12_8.7	44	5		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Function or object player, has external linkage but is only used in the translation unit built from player.c.	player	MISRA12_8.7	41	7		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Function or object ufo, has external linkage but is only used in the translation unit built from ufo.c.	ufo	MISRA12_8.7	37	4		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Function or object wBattleField, has external linkage but is only used in the translation unit built from view.c.	wBattleField	MISRA12_8.7	39	8		
+          Function or object wEmpty, has external linkage but is only used in the translation unit built from view.c.	wEmpty	MISRA12_8.7	40	8		
+          Function or object wScores, has external linkage but is only used in the translation unit built from view.c.	wScores	MISRA12_8.7	41	8		
+          Function or object wPlayer, has external linkage but is only used in the translation unit built from view.c.	wPlayer	MISRA12_8.7	43	8		
+          Function or object wPlayerMissile, has external linkage but is only used in the translation unit built from view.c.	wPlayerMissile	MISRA12_8.7	44	8		
+          Function or object wAliens, has external linkage but is only used in the translation unit built from view.c.	wAliens	MISRA12_8.7	45	8		
+          Function or object wAliensMissile, has external linkage but is only used in the translation unit built from view.c.	wAliensMissile	MISRA12_8.7	46	8		
+          Function or object wBunkers, has external linkage but is only used in the translation unit built from view.c.	wBunkers	MISRA12_8.7	47	8		
+          Function or object wGameOver, has external linkage but is only used in the translation unit built from view.c.	wGameOver	MISRA12_8.7	48	8		
+          Function or object wUfo, has external linkage but is only used in the translation unit built from view.c.	wUfo	MISRA12_8.7	49	8		
+          Function or object wStatus, has external linkage but is only used in the translation unit built from view.c.	wStatus	MISRA12_8.7	50	8		
+          Function or object wTitleScreen, has external linkage but is only used in the translation unit built from view.c.	wTitleScreen	MISRA12_8.7	51	8		
+          Function or object statusInit, has external linkage but is only used in the translation unit built from view.c.	statusInit	MISRA12_8.7	472	5		
+      8.8 The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage - MISRA12_8.8 -- 8.8 (Global)(Required) The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage.						
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          C Function ""waitForReturn"" appears to have internal linkage within globals.c, so static keyword should be used.	waitForReturn	MISRA12_8.8	82	5		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          C Global Object ""lives"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	lives	MISRA12_8.8	35	4		
+          C Global Object ""score"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	score	MISRA12_8.8	36	5		
+          C Global Object ""status"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	status	MISRA12_8.8	37	4		
+          C Function ""readInput"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	readInput	MISRA12_8.8	134	5		
+          C Function ""handleTimer"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	handleTimer	MISRA12_8.8	209	5		
+          C Function ""setUpTimer"" appears to have internal linkage within nInvaders.c, so static keyword should be used.	setUpTimer	MISRA12_8.8	313	5		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          C Global Object ""player"" appears to have internal linkage within player.c, so static keyword should be used.	player	MISRA12_8.8	41	7		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          C Global Object ""wBattleField"" appears to have internal linkage within view.c, so static keyword should be used.	wBattleField	MISRA12_8.8	39	8		
+          C Global Object ""wEmpty"" appears to have internal linkage within view.c, so static keyword should be used.	wEmpty	MISRA12_8.8	40	8		
+          C Global Object ""wScores"" appears to have internal linkage within view.c, so static keyword should be used.	wScores	MISRA12_8.8	41	8		
+          C Global Object ""wPlayer"" appears to have internal linkage within view.c, so static keyword should be used.	wPlayer	MISRA12_8.8	43	8		
+          C Global Object ""wPlayerMissile"" appears to have internal linkage within view.c, so static keyword should be used.	wPlayerMissile	MISRA12_8.8	44	8		
+          C Global Object ""wAliens"" appears to have internal linkage within view.c, so static keyword should be used.	wAliens	MISRA12_8.8	45	8		
+          C Global Object ""wAliensMissile"" appears to have internal linkage within view.c, so static keyword should be used.	wAliensMissile	MISRA12_8.8	46	8		
+          C Global Object ""wBunkers"" appears to have internal linkage within view.c, so static keyword should be used.	wBunkers	MISRA12_8.8	47	8		
+          C Global Object ""wGameOver"" appears to have internal linkage within view.c, so static keyword should be used.	wGameOver	MISRA12_8.8	48	8		
+          C Global Object ""wUfo"" appears to have internal linkage within view.c, so static keyword should be used.	wUfo	MISRA12_8.8	49	8		
+          C Global Object ""wStatus"" appears to have internal linkage within view.c, so static keyword should be used.	wStatus	MISRA12_8.8	50	8		
+          C Global Object ""wTitleScreen"" appears to have internal linkage within view.c, so static keyword should be used.	wTitleScreen	MISRA12_8.8	51	8		
+          C Function ""statusInit"" appears to have internal linkage within view.c, so static keyword should be used.	statusInit	MISRA12_8.8	472	5		
+      8.9 An object should be defined at block scope if its identifier only appears in a single function - MISRA12_8.9 -- 8.9 ( Advisory ) An object should be defined at block scope if its identifier only appears in a single function.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          alienshotnum is only used in a single function and should be defined at block scope.	alienshotnum	MISRA12_8.9	53	4		
+      Directive 4.10 Precautions shall be taken in order to prevent the contents of a header file being included more than once - MISRA12_4.10 -- Directive 4.10 ( Required ) Precautions shall be taken in order to prevent the contents of a header file being included more than once.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Include guards not used in file		MISRA12_4.10	25	1		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Include guards not used in file		MISRA12_4.10	25	1		
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Macro used for include guard is not unique		MISRA12_4.10	25	1		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Include guards not used in file		MISRA12_4.10	25	1		
+        /home/gabriele/projects/unifi-nInvaders/view.h						
+          Include guards not used in file		MISRA12_4.10	25	1		
+      Directive 4.4 Sections of code should not be ""commented out"" - MISRA12_4.4 -- Directive 4.4 ( Advisory ) Sections of code should not be ""commented out"".						
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Comment appears to contain code in or near k	k	MISRA12_4.4	267	80		
+      Directive 4.5 Identifiers in the same name space with overlapping visibility should be typographically unambiguous - MISRA12_4.5 -- Directive 4.5 ( Advisory ) Identifiers in the same name space with overlapping visibility should be typographically unambiguous"".						
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Identifier is typographically ambiguous to Aliens	aliens	MISRA12_4.5	41	7		
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Identifier is typographically ambiguous to Player	player	MISRA12_4.5	41	7		
+        /home/gabriele/projects/unifi-nInvaders/ufo.c						
+          Identifier is typographically ambiguous to shotx	shotX	MISRA12_4.5	87	20		
+          Identifier is typographically ambiguous to shoty	shotY	MISRA12_4.5	87	31		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Identifier is typographically ambiguous to UFO	Ufo	MISRA12_4.5	30	15		
+          Identifier is typographically ambiguous to UFO	Ufo	MISRA12_4.5	30	19		
+          Identifier is typographically ambiguous to UFO	ufo	MISRA12_4.5	37	4		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Identifier is typographically ambiguous to l	i	MISRA12_4.5	395	12		
+          Identifier is typographically ambiguous to alienType	alien_type	MISRA12_4.5	407	19		
+      Directive 4.6 typedefs that indicate size and signedness should be used in place of the basic numerical types - MISRA12_4.6 -- Directive 4.6 ( Advisory ) typedefs that indicate size and signedness should be used in place of the basic numerical types.						
+        /home/gabriele/projects/unifi-nInvaders/aliens.c						
+          Violation: basic numerical type ""int"" used.	i	MISRA12_4.6	34	12		
+          Violation: basic numerical type ""int"" used.	j	MISRA12_4.6	34	14		
+          Violation: basic numerical type ""int"" used in ""int [5][10]"".	level	MISRA12_4.6	37	12		
+          Violation: basic numerical type ""int"" used.	a	MISRA12_4.6	81	12		
+          Violation: basic numerical type ""int"" used.	b	MISRA12_4.6	81	15		
+          Violation: basic numerical type ""char"" used in ""char [4][81]"".	bunkerd	MISRA12_4.6	85	13		
+          Violation: basic numerical type ""int"" used.	aliensMove	MISRA12_4.6	112	4		
+          Violation: basic numerical type ""int"" used.	cx	MISRA12_4.6	115	12		
+          Violation: basic numerical type ""int"" used.	cy	MISRA12_4.6	115	15		
+          Violation: basic numerical type ""int"" used.	fReachedPlayer	MISRA12_4.6	116	12		
+          Violation: basic numerical type ""int"" used.	k	MISRA12_4.6	158	12		
+          Violation: basic numerical type ""int"" used.	row	MISRA12_4.6	158	14		
+          Violation: basic numerical type ""int"" used.	c	MISRA12_4.6	159	12		
+          Violation: basic numerical type ""int"" used.	aliensMissileMove	MISRA12_4.6	199	4		
+          Violation: basic numerical type ""int"" used.	i	MISRA12_4.6	201	12		
+          Violation: basic numerical type ""int"" used.	tmp	MISRA12_4.6	201	15		
+          Violation: basic numerical type ""int"" used.	fPlayerWasHit	MISRA12_4.6	202	12		
+          Violation: basic numerical type ""int"" used.	shootThreshold	MISRA12_4.6	203	12		
+          Violation: basic numerical type ""int"" used.	alienshot_counter	MISRA12_4.6	204	19		
+          Violation: basic numerical type ""int"" used.	aliensHitCheck	MISRA12_4.6	269	4		
+          Violation: basic numerical type ""int"" used.	shotx	MISRA12_4.6	269	23		
+          Violation: basic numerical type ""int"" used.	shoty	MISRA12_4.6	269	34		
+          Violation: basic numerical type ""int"" used.	alienType	MISRA12_4.6	271	12		
+          Violation: basic numerical type ""int"" used.	shipx	MISRA12_4.6	272	12		
+          Violation: basic numerical type ""int"" used.	shipy	MISRA12_4.6	272	19		
+          Violation: basic numerical type ""int"" used.	bunkersHitCheck	MISRA12_4.6	291	4		
+          Violation: basic numerical type ""int"" used.	shotx	MISRA12_4.6	291	24		
+          Violation: basic numerical type ""int"" used.	shoty	MISRA12_4.6	291	35		
+          Violation: basic numerical type ""int"" used.	adjx	MISRA12_4.6	293	12		
+          Violation: basic numerical type ""int"" used.	adjy	MISRA12_4.6	293	18		
+          Violation: basic numerical type ""int"" used.	fBunkerWasHit	MISRA12_4.6	294	12		
+        /home/gabriele/projects/unifi-nInvaders/aliens.h						
+          Violation: basic numerical type ""int"" used.	shipnum	MISRA12_4.6	43	4		
+          Violation: basic numerical type ""int"" used.	posX	MISRA12_4.6	33	12		
+          Violation: basic numerical type ""int"" used.	posY	MISRA12_4.6	34	12		
+          Violation: basic numerical type ""int"" used.	right	MISRA12_4.6	35	12		
+          Violation: basic numerical type ""int"" used.	left	MISRA12_4.6	36	12		
+          Violation: basic numerical type ""int"" used.	bottom	MISRA12_4.6	37	12		
+          Violation: basic numerical type ""int"" used.	speed	MISRA12_4.6	38	12		
+          Violation: basic numerical type ""int"" used in ""int [10]"".	lowest_ship	MISRA12_4.6	50	4		
+          Violation: basic numerical type ""int"" used in ""int [10]"".	alienshotx	MISRA12_4.6	51	4		
+          Violation: basic numerical type ""int"" used in ""int [10]"".	alienshoty	MISRA12_4.6	52	4		
+          Violation: basic numerical type ""int"" used.	alienshotnum	MISRA12_4.6	53	4		
+          Violation: basic numerical type ""int"" used in ""int [5][10]"".	alienBlock	MISRA12_4.6	54	4		
+          Violation: basic numerical type ""int"" used in ""int [4][81]"".	bunker	MISRA12_4.6	56	4		
+          Violation: basic numerical type ""int"" used.	aliensMove	MISRA12_4.6	61	4		
+          Violation: basic numerical type ""int"" used.	aliensMissileMove	MISRA12_4.6	62	4		
+          Violation: basic numerical type ""int"" used.	aliensHitCheck	MISRA12_4.6	64	4		
+          Violation: basic numerical type ""int"" used.	shotx	MISRA12_4.6	64	23		
+          Violation: basic numerical type ""int"" used.	shoty	MISRA12_4.6	64	34		
+          Violation: basic numerical type ""int"" used.	bunkersHitCheck	MISRA12_4.6	65	4		
+          Violation: basic numerical type ""int"" used.	shotx	MISRA12_4.6	65	24		
+          Violation: basic numerical type ""int"" used.	shoty	MISRA12_4.6	65	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	69	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	69	37		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	69	44		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	69	53		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	70	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	70	35		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	70	42		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	70	51		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	71	30		
+          Violation: basic numerical type ""int"" used in ""int *"".	pAliens	MISRA12_4.6	71	42		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	72	37		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	72	44		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	73	35		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	73	42		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	74	36		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	74	43		
+        /home/gabriele/projects/unifi-nInvaders/globals.c						
+          Violation: basic numerical type ""int"" used.	microseconds	MISRA12_4.6	44	17		
+          Violation: basic numerical type ""char"" used in ""char [2]"".	b	MISRA12_4.6	84	13		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+          Violation: basic numerical type ""int"" used.	lives	MISRA12_4.6	35	4		
+          Violation: basic numerical type ""long"" used.	score	MISRA12_4.6	36	5		
+          Violation: basic numerical type ""int"" used.	status	MISRA12_4.6	37	4		
+          Violation: basic numerical type ""int"" used.	argc	MISRA12_4.6	66	36		
+          Violation: basic numerical type ""char"" used in ""char **"".	argv	MISRA12_4.6	66	49		
+          Violation: basic numerical type ""int"" used.	sig	MISRA12_4.6	92	23		
+          Violation: basic numerical type ""int"" used.	ch	MISRA12_4.6	136	12		
+          Violation: basic numerical type ""int"" used.	lastmove	MISRA12_4.6	137	19		
+          Violation: basic numerical type ""int"" used.	aliens_move_counter	MISRA12_4.6	211	19		
+          Violation: basic numerical type ""int"" used.	aliens_shot_counter	MISRA12_4.6	212	19		
+          Violation: basic numerical type ""int"" used.	player_shot_counter	MISRA12_4.6	213	19		
+          Violation: basic numerical type ""int"" used.	ufo_move_counter	MISRA12_4.6	214	19		
+          Violation: basic numerical type ""int"" used.	title_animation_counter	MISRA12_4.6	215	19		
+          Violation: basic numerical type ""int"" used.	game_over_counter	MISRA12_4.6	216	19		
+          Violation: basic numerical type ""int"" used.	argc	MISRA12_4.6	329	13		
+          Violation: basic numerical type ""char"" used in ""char **"".	argv	MISRA12_4.6	329	26	Ignored	
+          Violation: basic numerical type ""int"" used.	alienType	MISRA12_4.6	354	19		
+          Violation: basic numerical type ""int"" used in ""int [4]"".	points	MISRA12_4.6	356	12		
+        /home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+          Violation: basic numerical type ""int"" used.	weite	MISRA12_4.6	49	4		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	50	4		
+          Violation: basic numerical type ""int"" used.	skill_level	MISRA12_4.6	51	4		
+          Violation: basic numerical type ""int"" used.	alienType	MISRA12_4.6	46	19		
+          Violation: basic numerical type ""int"" used.	a	MISRA12_4.6	43	19		
+          Violation: basic numerical type ""int"" used.	argc	MISRA12_4.6	39	13		
+          Violation: basic numerical type ""char"" used in ""char **"".	argv	MISRA12_4.6	39	26	Ignored	
+        /home/gabriele/projects/unifi-nInvaders/player.c						
+          Violation: basic numerical type ""int"" used.	posX	MISRA12_4.6	33	12		
+          Violation: basic numerical type ""int"" used.	posY	MISRA12_4.6	34	12		
+          Violation: basic numerical type ""int"" used.	speed	MISRA12_4.6	35	12		
+          Violation: basic numerical type ""int"" used.	missileFired	MISRA12_4.6	36	12		
+          Violation: basic numerical type ""int"" used.	missileX	MISRA12_4.6	37	12		
+          Violation: basic numerical type ""int"" used.	missileY	MISRA12_4.6	38	12		
+          Violation: basic numerical type ""int"" used.	newPosX	MISRA12_4.6	69	27		
+          Violation: basic numerical type ""int"" used.	playerHitCheck	MISRA12_4.6	130	4		
+          Violation: basic numerical type ""int"" used.	hostileShotX	MISRA12_4.6	130	23		
+          Violation: basic numerical type ""int"" used.	hostileShotY	MISRA12_4.6	130	41		
+          Violation: basic numerical type ""int"" used.	fPlayerWasHit	MISRA12_4.6	132	12		
+          Violation: basic numerical type ""int"" used.	playerMoveMissile	MISRA12_4.6	173	4		
+          Violation: basic numerical type ""int"" used.	fNoAliensLeft	MISRA12_4.6	175	12		
+          Violation: basic numerical type ""int"" used.	alienTypeHit	MISRA12_4.6	176	12		
+        /home/gabriele/projects/unifi-nInvaders/player.h						
+          Violation: basic numerical type ""int"" used.	playerHitCheck	MISRA12_4.6	37	4		
+          Violation: basic numerical type ""int"" used.	playerMoveMissile	MISRA12_4.6	39	4		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	45	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	45	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	44	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	44	37		
+          Violation: basic numerical type ""int"" used.	hostileShotX	MISRA12_4.6	37	23		
+          Violation: basic numerical type ""int"" used.	hostileShotY	MISRA12_4.6	37	41		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	48	35		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	48	42		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	47	37		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	47	44		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	49	39		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	49	46		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	50	36		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	50	43		
+          Violation: basic numerical type ""int"" used.	alienType	MISRA12_4.6	52	26		
+        /home/gabriele/projects/unifi-nInvaders/ufo.c						
+          Violation: basic numerical type ""int"" used.	fShowUfo	MISRA12_4.6	29	11		
+          Violation: basic numerical type ""int"" used.	posX	MISRA12_4.6	46	24		
+          Violation: basic numerical type ""int"" used.	ufoShowUfo	MISRA12_4.6	73	4		
+          Violation: basic numerical type ""int"" used.	ufoHitCheck	MISRA12_4.6	87	4		
+          Violation: basic numerical type ""int"" used.	shotX	MISRA12_4.6	87	20		
+          Violation: basic numerical type ""int"" used.	shotY	MISRA12_4.6	87	31		
+          Violation: basic numerical type ""int"" used.	fUfoWasHit	MISRA12_4.6	89	12		
+        /home/gabriele/projects/unifi-nInvaders/ufo.h						
+          Violation: basic numerical type ""int"" used.	ufoShowUfo	MISRA12_4.6	40	4		
+          Violation: basic numerical type ""int"" used.	ufoHitCheck	MISRA12_4.6	42	4		
+          Violation: basic numerical type ""int"" used.	posX	MISRA12_4.6	33	12		
+          Violation: basic numerical type ""int"" used.	posY	MISRA12_4.6	34	12		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	45	27		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	45	34		
+          Violation: basic numerical type ""int"" used.	shotX	MISRA12_4.6	42	20		
+          Violation: basic numerical type ""int"" used.	shotY	MISRA12_4.6	42	31		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	47	25		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	47	32		
+        /home/gabriele/projects/unifi-nInvaders/view.c						
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	68	23		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	68	30		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	77	21		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	77	28		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	99	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	99	37		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	108	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	108	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	117	32		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	117	39		
+          Violation: basic numerical type ""char"" used in ""char [17]"".	playerExplosionChars	MISRA12_4.6	120	13		
+          Violation: basic numerical type ""int"" used.	t	MISRA12_4.6	121	12		
+          Violation: basic numerical type ""int"" used.	s	MISRA12_4.6	121	14		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	154	23		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	154	30		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	154	37		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	154	46		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	163	21		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	163	28		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	163	35		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	163	44		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	184	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	184	37		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	193	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	193	35		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	202	23		
+          Violation: basic numerical type ""int"" used in ""int *"".	pAliens	MISRA12_4.6	202	35		
+          Violation: basic numerical type ""int"" used.	frame	MISRA12_4.6	204	19		
+          Violation: basic numerical type ""int"" used.	k	MISRA12_4.6	205	12		
+          Violation: basic numerical type ""int"" used.	row	MISRA12_4.6	205	14		
+          Violation: basic numerical type ""int"" used.	c	MISRA12_4.6	206	12		
+          Violation: basic numerical type ""int"" used.	alienType	MISRA12_4.6	207	12		
+          Violation: basic numerical type ""char"" used in ""char [2][9][4]"".	ships	MISRA12_4.6	208	13		
+          Violation: basic numerical type ""int"" used in ""int [9]"".	colors	MISRA12_4.6	212	12		
+          Violation: basic numerical type ""int"" used in ""int *"".	pBunker	MISRA12_4.6	260	25		
+          Violation: basic numerical type ""int"" used.	l	MISRA12_4.6	262	12		
+          Violation: basic numerical type ""int"" used.	k	MISRA12_4.6	262	15		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	291	29		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	291	36		
+          Violation: basic numerical type ""char"" used in ""char [4][6]"".	ufo	MISRA12_4.6	302	13		
+          Violation: basic numerical type ""int"" used.	frame	MISRA12_4.6	303	19		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	327	20		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	327	27		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	336	18		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	336	25		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	371	12		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	372	12		
+          Violation: basic numerical type ""int"" used.	frame	MISRA12_4.6	393	19		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	394	12		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	394	15		
+          Violation: basic numerical type ""int"" used.	i	MISRA12_4.6	395	12		
+          Violation: basic numerical type ""char"" used in ""char [4][6]"".	ufo	MISRA12_4.6	399	13		
+          Violation: basic numerical type ""char"" used in ""char [2][9][4]"".	aliens	MISRA12_4.6	400	13		
+          Violation: basic numerical type ""int"" used in ""int [3]"".	score	MISRA12_4.6	404	12		
+          Violation: basic numerical type ""int"" used in ""int [9]"".	colors	MISRA12_4.6	405	12		
+          Violation: basic numerical type ""char"" used in ""char [12]"".	buffer	MISRA12_4.6	406	13		
+          Violation: basic numerical type ""int"" used.	alien_type	MISRA12_4.6	407	19		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	482	23		
+          Violation: basic numerical type ""int"" used.	score	MISRA12_4.6	482	34		
+          Violation: basic numerical type ""int"" used.	lives	MISRA12_4.6	482	45		
+          Violation: basic numerical type ""int"" used.	t	MISRA12_4.6	484	12		
+          Violation: basic numerical type ""int"" used.	xOffset	MISRA12_4.6	484	15		
+          Violation: basic numerical type ""char"" used in ""char [55]"".	strStatus	MISRA12_4.6	485	13		
+          Violation: basic numerical type ""int"" used.	sig	MISRA12_4.6	548	23		
+        /home/gabriele/projects/unifi-nInvaders/view.h						
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	54	21		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	54	28		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	54	35		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	54	44		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	55	23		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	55	30		
+          Violation: basic numerical type ""int"" used.	wid	MISRA12_4.6	55	37		
+          Violation: basic numerical type ""int"" used.	hgt	MISRA12_4.6	55	46		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	56	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	56	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	57	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	57	37		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	58	23		
+          Violation: basic numerical type ""int"" used in ""int *"".	pAliens	MISRA12_4.6	58	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	61	29		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	61	36		
+          Violation: basic numerical type ""int"" used in ""int *"".	pBunker	MISRA12_4.6	62	25		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	64	21		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	64	28		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	65	23		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	65	30		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	66	32		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	66	39		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	67	28		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	67	35		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	68	30		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	68	37		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	71	18		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	71	25		
+          Violation: basic numerical type ""int"" used.	x	MISRA12_4.6	72	20		
+          Violation: basic numerical type ""int"" used.	y	MISRA12_4.6	72	27		
+          Violation: basic numerical type ""int"" used.	level	MISRA12_4.6	75	23		
+          Violation: basic numerical type ""int"" used.	score	MISRA12_4.6	75	34		
+          Violation: basic numerical type ""int"" used.	lives	MISRA12_4.6	75	45		
+
