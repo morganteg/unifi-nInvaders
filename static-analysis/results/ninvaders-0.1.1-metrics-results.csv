@@ -1,0 +1,112 @@
+Kind,Name,CountLineCode,Cyclomatic
+Struct,"AliensStruct",0,
+Struct,"PlayerStruct",0,
+Struct,"UfoStruct",0,
+File,"aliens.c",147,
+File,"aliens.h",21,
+Function,"aliensClear",4,1
+Function,"aliensDisplay",4,1
+Function,"aliensHitCheck",15,3
+Static Function,"aliensInit",5,1
+Function,"aliensMissileClear",4,1
+Function,"aliensMissileDisplay",4,1
+Static Function,"aliensMissileInit",7,1
+Function,"aliensMissileMove",40,9
+Function,"aliensMove",24,6
+Function,"aliensRefresh",36,7
+Function,"aliensReset",33,5
+Function,"battleFieldClear",4,1
+Static Function,"battleFieldInit",8,1
+Function,"bunkersClear",4,1
+Function,"bunkersClearElement",4,1
+Function,"bunkersDisplay",16,4
+Function,"bunkersHitCheck",15,3
+Static Function,"bunkersInit",5,1
+Function,"bunkersReset",20,4
+Function,"doScoring",9,2
+Function,"doSleep",4,1
+Static Function,"drawscore",4,1
+Static Function,"evaluateCommandLine",19,5
+Static Function,"finish",31,9
+Static Function,"finishView",5,1
+Function,"gameOverDisplay",7,1
+Static Function,"gameOverInit",19,1
+File,"globals.c",478,
+File,"globals.h",5,
+Function,"graphicEngineInit",27,1
+Function,"handleGameHighScore",6,3
+Function,"handleGameLoop",25,10
+Function,"handleGameNextLevel",13,2
+Function,"handleGameOver",10,2
+Static Function,"handleTimer",30,7
+Static Function,"initLevel",8,1
+Function,"main",16,2
+File,"nInvaders.c",259,
+File,"nInvaders.h",5,
+File,"player.c",118,
+File,"player.h",9,
+Function,"playerClear",4,1
+Function,"playerDisplay",4,1
+Function,"playerExplode",4,1
+Function,"playerExplosionDisplay",17,3
+Function,"playerHitCheck",10,3
+Static Function,"playerInit",7,1
+Function,"playerLaunchMissile",8,2
+Function,"playerMissileClear",4,1
+Function,"playerMissileDisplay",4,1
+Static Function,"playerMissileInit",8,1
+Static Function,"playerMove",6,1
+Function,"playerMoveLeft",8,2
+Function,"playerMoveMissile",39,8
+Function,"playerMoveRight",8,2
+Static Function,"playerReloadMissile",4,1
+Function,"playerReset",14,2
+Function,"playerTurboOff",4,1
+Function,"playerTurboOn",4,1
+Static Function,"readInput",19,4
+Static Function,"readInputDefault",33,10
+Static Function,"readInputGameHighScore",14,3
+Static Function,"readInputGamePaused",6,2
+Function,"refreshScreen",5,2
+Static Function,"setUpTimer",13,1
+Function,"showGpl",33,1
+Function,"showGplSection1",27,1
+Function,"showGplSection10",27,1
+Function,"showGplSection11",27,1
+Function,"showGplSection12",27,1
+Function,"showGplSection13",27,1
+Function,"showGplSection14",27,1
+Function,"showGplSection15",19,1
+Function,"showGplSection2",26,1
+Function,"showGplSection3",27,1
+Function,"showGplSection4",27,1
+Function,"showGplSection5",27,1
+Function,"showGplSection6",27,1
+Function,"showGplSection7",27,1
+Function,"showGplSection8",27,1
+Function,"showGplSection9",27,1
+Function,"showGplShort",21,1
+Function,"showUsage",8,1
+Function,"showVersion",10,1
+Function,"statusDisplay",14,2
+Static Function,"statusInit",5,1
+Function,"titleScreenClear",4,1
+Function,"titleScreenDisplay",21,1
+Function,"titleScreenDisplayAliensLocal",32,5
+Function,"titleScreenDisplayTitleText",9,1
+Function,"titleScreenDisplayWStartText",6,1
+Static Function,"titleScreenInit",5,1
+File,"ufo.c",43,
+File,"ufo.h",9,
+Function,"ufoClear",4,1
+Function,"ufoDisplay",4,1
+Function,"ufoHitCheck",11,3
+Static Function,"ufoInit",6,1
+Static Function,"ufoMove",7,1
+Function,"ufoMoveLeft",8,2
+Function,"ufoRefresh",9,1
+Function,"ufoReset",7,1
+Function,"ufoShowUfo",9,3
+File,"view.c",347,
+File,"view.h",23,
+Static Function,"waitForReturn",6,1

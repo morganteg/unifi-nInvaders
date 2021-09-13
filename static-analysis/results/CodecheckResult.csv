@@ -1,0 +1,223 @@
+Results	Entity	CheckID	Line	Column	Ignored	Note
+Number of Results: 167						
+Published Standards						
+MISRA C 2012						
+17.8 A function parameter should not be modified - MISRA12_17.8 -- 17.8 ( Advisory ) A function parameter should not be modified.						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Parameter lastmove is modified	readInputDefault	MISRA12_17.8	162	4		
+Parameter lastmove is modified	readInputDefault	MISRA12_17.8	170	4		
+Parameter lastmove is modified	readInputDefault	MISRA12_17.8	184	4		
+Parameter aliens_move_counter is modified	handleGameNextLevel	MISRA12_17.8	224	2		
+Parameter aliens_shot_counter is modified	handleGameNextLevel	MISRA12_17.8	225	2		
+Parameter ufo_move_counter is modified	handleGameNextLevel	MISRA12_17.8	227	2		
+Parameter aliens_shot_counter is modified	handleGameLoop	MISRA12_17.8	270	35		
+Parameter player_shot_counter is modified	handleGameLoop	MISRA12_17.8	271	35		
+Parameter aliens_move_counter is modified	handleGameLoop	MISRA12_17.8	272	39		
+Parameter ufo_move_counter is modified	handleGameLoop	MISRA12_17.8	273	32		
+Parameter game_over_counter is modified	handleGameOver	MISRA12_17.8	282	4		
+Parameter game_over_counter is modified	handleGameOver	MISRA12_17.8	285	4		
+Parameter title_animation_counter is modified	handleGameHighScore	MISRA12_17.8	294	39		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+Parameter wTitleText is modified	titleScreenDisplayTitleText	MISRA12_17.8	388	2		
+Parameter wAliensLocal is modified	titleScreenDisplayAliensLocal	MISRA12_17.8	411	2		
+Parameter wStartText is modified	titleScreenDisplayWStartText	MISRA12_17.8	432	2		
+21.10 The Standard Library time and date functions shall not be used - MISRA12_21.10 -- 21.10 (Required) The Standard Library time and date functions shall not be used						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+time.h used	signal.h	MISRA12_21.10	24	0	Ignored	
+21.2 A reserved identifier or macro name shall not be declared - MISRA12_21.2 -- 21.2 (Required) A reserved identifier or macro name shall not be declared.						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Reserved Identifier, Macro, or Function declared in file nInvaders.c	exit	MISRA12_21.2	91	4		
+21.5 The standard header file <signal.h> shall not be used - MISRA12_21.5 -- 21.5 (Required) The standard header file <signal.h> shall not be used						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+header file signal.h used.	nInvaders.c	MISRA12_21.5	24	0	Ignored	
+/home/gabriele/projects/unifi-nInvaders/view.c						
+header file signal.h used.	view.c	MISRA12_21.5	28	0	Ignored	
+21.8 The library functions abort, exit, getenv and system of <stdlib.h> shall not be used - MISRA12_21.8 -- 21.8 (Required) The library functions abort, exit, getenv and system of <stdlib.h> shall not be used						
+/home/gabriele/projects/unifi-nInvaders/view.c						
+cstdlib function exit used in file view.c	exit	MISRA12_21.8	563	2	Ignored	
+5.1 External identifiers shall be distinct - MISRA12_5.1 -- 5.1 (Global)( Required ) External identifiers shall be distinct.						
+/home/gabriele/projects/unifi-nInvaders/aliens.c						
+Non distinct external identifier bunkersHitCheck conflicts with entity bunkersClear in file view.c	bunkersHitCheck	MISRA12_5.1	249	8		
+Non distinct external identifier bunkersHitCheck conflicts with entity bunkersDisplay in file view.c	bunkersHitCheck	MISRA12_5.1	249	8		
+Non distinct external identifier bunkersHitCheck conflicts with entity bunkersReset in file aliens.c	bunkersHitCheck	MISRA12_5.1	249	8		
+Non distinct external identifier bunkersHitCheck conflicts with entity bunkersClearElement in file view.c	bunkersHitCheck	MISRA12_5.1	249	8		
+/home/gabriele/projects/unifi-nInvaders/aliens.h						
+Non distinct external identifier aliens conflicts with entity alienshotx in file aliens.h	aliens	MISRA12_5.1	37	27		
+Non distinct external identifier aliens conflicts with entity alienshoty in file aliens.h	aliens	MISRA12_5.1	37	27		
+/home/gabriele/projects/unifi-nInvaders/globals.c						
+Non distinct external identifier showGpl conflicts with entity showGplSection1 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection10 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection11 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection12 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection13 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection14 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection15 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection2 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection3 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection4 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection5 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection6 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection7 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection8 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplSection9 in file globals.c	showGpl	MISRA12_5.1	529	5		
+Non distinct external identifier showGpl conflicts with entity showGplShort in file globals.c	showGpl	MISRA12_5.1	529	5		
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Non distinct external identifier handleGameHighScore conflicts with entity handleGameLoop in file nInvaders.c	handleGameHighScore	MISRA12_5.1	289	5		
+Non distinct external identifier handleGameHighScore conflicts with entity handleGameNextLevel in file nInvaders.c	handleGameHighScore	MISRA12_5.1	289	5		
+Non distinct external identifier handleGameHighScore conflicts with entity handleGameOver in file nInvaders.c	handleGameHighScore	MISRA12_5.1	289	5		
+/home/gabriele/projects/unifi-nInvaders/player.c						
+Non distinct external identifier playerHitCheck conflicts with entity playerClear in file view.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerDisplay in file view.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerExplosionDisplay in file view.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerMissileClear in file view.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerMissileDisplay in file view.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerExplode in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerLaunchMissile in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerMoveLeft in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerMoveMissile in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerMoveRight in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerReset in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerTurboOff in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+Non distinct external identifier playerHitCheck conflicts with entity playerTurboOn in file player.c	playerHitCheck	MISRA12_5.1	128	8		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+Non distinct external identifier aliensClear conflicts with entity aliensDisplay in file view.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensMissileClear in file view.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensMissileDisplay in file view.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensHitCheck in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensMissileMove in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensMove in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensReset in file aliens.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier aliensClear conflicts with entity aliensRefresh in file view.c	aliensClear	MISRA12_5.1	163	5		
+Non distinct external identifier titleScreenClear conflicts with entity titleScreenDisplay in file view.c	titleScreenClear	MISRA12_5.1	475	5		
+Non distinct external identifier titleScreenClear conflicts with entity titleScreenDisplayAliensLocal in file view.c	titleScreenClear	MISRA12_5.1	475	5		
+Non distinct external identifier titleScreenClear conflicts with entity titleScreenDisplayTitleText in file view.c	titleScreenClear	MISRA12_5.1	475	5		
+Non distinct external identifier titleScreenClear conflicts with entity titleScreenDisplayWStartText in file view.c	titleScreenClear	MISRA12_5.1	475	5		
+8.11 When an array with external linkage is declared, its size should be explicitly specified - MISRA12_8.11 -- 8.11 ( Advisory ) When an array with external linkage is declared, its size should be explicitly specified.						
+/home/gabriele/projects/unifi-nInvaders/aliens.h						
+Irregular Array declaration. bunker cannot be tested.	bunker	MISRA12_8.11	51	15		
+8.2 Function types shall be in prototype form with named parameters - MISRA12_8.2 -- 8.2 ( Required ) Function types shall be in prototype form with named parameters.						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Improper parameter format for function exit; each parameter must have a type and a name	exit	MISRA12_8.2	91	4	Ignored	
+"Keyword """"void"""" not used to denote empty parameter list for function endwin"	endwin	MISRA12_8.2	98	8	Ignored	
+"Keyword """"void"""" not used to denote empty parameter list for function getch"	getch	MISRA12_8.2	196	7		
+8.4 A compatible declaration shall be visible when an object or function with external linkage is defined - MISRA12_8.4 -- 8.4 ( Required ) A compatible declaration shall be visible when an object or function with external linkage is defined.						
+/home/gabriele/projects/unifi-nInvaders/globals.c						
+Object or function showGplSection1, has external linkage but no visible declaration	showGplSection1	MISRA12_8.4	115	5		
+Object or function showGplSection2, has external linkage but no visible declaration	showGplSection2	MISRA12_8.4	143	5		
+Object or function showGplSection3, has external linkage but no visible declaration	showGplSection3	MISRA12_8.4	170	5		
+Object or function showGplSection4, has external linkage but no visible declaration	showGplSection4	MISRA12_8.4	198	5		
+Object or function showGplSection5, has external linkage but no visible declaration	showGplSection5	MISRA12_8.4	226	5		
+Object or function showGplSection6, has external linkage but no visible declaration	showGplSection6	MISRA12_8.4	254	5		
+Object or function showGplSection7, has external linkage but no visible declaration	showGplSection7	MISRA12_8.4	282	5		
+Object or function showGplSection8, has external linkage but no visible declaration	showGplSection8	MISRA12_8.4	310	5		
+Object or function showGplSection9, has external linkage but no visible declaration	showGplSection9	MISRA12_8.4	338	5		
+Object or function showGplSection10, has external linkage but no visible declaration	showGplSection10	MISRA12_8.4	366	5		
+Object or function showGplSection11, has external linkage but no visible declaration	showGplSection11	MISRA12_8.4	394	5		
+Object or function showGplSection12, has external linkage but no visible declaration	showGplSection12	MISRA12_8.4	422	5		
+Object or function showGplSection13, has external linkage but no visible declaration	showGplSection13	MISRA12_8.4	450	5		
+Object or function showGplSection14, has external linkage but no visible declaration	showGplSection14	MISRA12_8.4	478	5		
+Object or function showGplSection15, has external linkage but no visible declaration	showGplSection15	MISRA12_8.4	506	5		
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Object or function handleGameNextLevel, has external linkage but no visible declaration	handleGameNextLevel	MISRA12_8.4	219	5		
+Object or function handleGameLoop, has external linkage but no visible declaration	handleGameLoop	MISRA12_8.4	239	5		
+Object or function handleGameOver, has external linkage but no visible declaration	handleGameOver	MISRA12_8.4	278	5		
+Object or function handleGameHighScore, has external linkage but no visible declaration	handleGameHighScore	MISRA12_8.4	289	5		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+Object or function titleScreenDisplayTitleText, has external linkage but no visible declaration	titleScreenDisplayTitleText	MISRA12_8.4	387	5		
+Object or function titleScreenDisplayAliensLocal, has external linkage but no visible declaration	titleScreenDisplayAliensLocal	MISRA12_8.4	397	5		
+Object or function titleScreenDisplayWStartText, has external linkage but no visible declaration	titleScreenDisplayWStartText	MISRA12_8.4	431	5		
+8.6 ( Strict | Special ) An identifier with external linkage shall have exactly one external definition - MISRA12_8.6 -- 8.6 (Global)( Required ) An identifier with external linkage shall have exactly one external definition.						
+/home/gabriele/projects/unifi-nInvaders/aliens.c						
+Identifier rand, does not have a definition	rand	MISRA12_8.6	197	38		
+/home/gabriele/projects/unifi-nInvaders/globals.c						
+Identifier usleep, does not have a definition	usleep	MISRA12_8.6	47	8		
+Identifier fgets, does not have a definition	fgets	MISRA12_8.6	87	8		
+Identifier fprintf, does not have a definition	fprintf	MISRA12_8.6	116	8		
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Identifier strcmp, does not have a definition	strcmp	MISRA12_8.6	74	22		
+Identifier getch, does not have a definition	getch	MISRA12_8.6	196	7		
+Identifier setitimer, does not have a definition	setitimer	MISRA12_8.6	347	8		
+Identifier sigaction, does not have a definition	sigaction	MISRA12_8.6	351	8		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+Identifier newpad, does not have a definition	newpad	MISRA12_8.6	146	12		
+Identifier wclear, does not have a definition	wclear	MISRA12_8.6	147	8		
+Identifier wattrset, does not have a definition	wattrset	MISRA12_8.6	176	8		
+Identifier waddch, does not have a definition	waddch	MISRA12_8.6	177	8		
+Identifier waddnstr, does not have a definition	waddnstr	MISRA12_8.6	234	10		
+Identifier wrefresh, does not have a definition	wrefresh	MISRA12_8.6	374	8		
+Identifier snprintf, does not have a definition	snprintf	MISRA12_8.6	413	8		
+Identifier sprintf, does not have a definition	sprintf	MISRA12_8.6	506	8		
+Identifier newwin, does not have a definition	newwin	MISRA12_8.6	531	17		
+Identifier mvwin, does not have a definition	mvwin	MISRA12_8.6	533	8		
+Identifier copywin, does not have a definition	copywin	MISRA12_8.6	542	8		
+Identifier wredrawln, does not have a definition	wredrawln	MISRA12_8.6	551	2		
+Identifier endwin, does not have a definition	endwin	MISRA12_8.6	562	8		
+Identifier exit, does not have a definition	exit	MISRA12_8.6	563	2		
+Identifier signal, does not have a definition	signal	MISRA12_8.6	572	9		
+Identifier initscr, does not have a definition	initscr	MISRA12_8.6	573	9		
+Identifier keypad, does not have a definition	keypad	MISRA12_8.6	574	8		
+Identifier nonl, does not have a definition	nonl	MISRA12_8.6	575	9		
+Identifier cbreak, does not have a definition	cbreak	MISRA12_8.6	576	9		
+Identifier noecho, does not have a definition	noecho	MISRA12_8.6	577	9		
+Identifier start_color, does not have a definition	start_color	MISRA12_8.6	578	8		
+Identifier init_pair, does not have a definition	init_pair	MISRA12_8.6	579	8		
+8.7 Functions and objects should not be defined with external linkage if they are referenced in only one translation unit - MISRA12_8.7 -- 8.7 (Global)(Advisory) Functions and objects should not be defined with external linkage if they are referenced in only one translation unit.						
+/home/gabriele/projects/unifi-nInvaders/globals.c						
+Function or object showGplSection1, has external linkage but is only used in the translation unit built from globals.c.	showGplSection1	MISRA12_8.7	115	5		
+Function or object showGplSection2, has external linkage but is only used in the translation unit built from globals.c.	showGplSection2	MISRA12_8.7	143	5		
+Function or object showGplSection3, has external linkage but is only used in the translation unit built from globals.c.	showGplSection3	MISRA12_8.7	170	5		
+Function or object showGplSection4, has external linkage but is only used in the translation unit built from globals.c.	showGplSection4	MISRA12_8.7	198	5		
+Function or object showGplSection5, has external linkage but is only used in the translation unit built from globals.c.	showGplSection5	MISRA12_8.7	226	5		
+Function or object showGplSection6, has external linkage but is only used in the translation unit built from globals.c.	showGplSection6	MISRA12_8.7	254	5		
+Function or object showGplSection7, has external linkage but is only used in the translation unit built from globals.c.	showGplSection7	MISRA12_8.7	282	5		
+Function or object showGplSection8, has external linkage but is only used in the translation unit built from globals.c.	showGplSection8	MISRA12_8.7	310	5		
+Function or object showGplSection9, has external linkage but is only used in the translation unit built from globals.c.	showGplSection9	MISRA12_8.7	338	5		
+Function or object showGplSection10, has external linkage but is only used in the translation unit built from globals.c.	showGplSection10	MISRA12_8.7	366	5		
+Function or object showGplSection11, has external linkage but is only used in the translation unit built from globals.c.	showGplSection11	MISRA12_8.7	394	5		
+Function or object showGplSection12, has external linkage but is only used in the translation unit built from globals.c.	showGplSection12	MISRA12_8.7	422	5		
+Function or object showGplSection13, has external linkage but is only used in the translation unit built from globals.c.	showGplSection13	MISRA12_8.7	450	5		
+Function or object showGplSection14, has external linkage but is only used in the translation unit built from globals.c.	showGplSection14	MISRA12_8.7	478	5		
+Function or object showGplSection15, has external linkage but is only used in the translation unit built from globals.c.	showGplSection15	MISRA12_8.7	506	5		
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+Function or object handleGameNextLevel, has external linkage but is only used in the translation unit built from nInvaders.c.	handleGameNextLevel	MISRA12_8.7	219	5		
+Function or object handleGameLoop, has external linkage but is only used in the translation unit built from nInvaders.c.	handleGameLoop	MISRA12_8.7	239	5		
+Function or object handleGameOver, has external linkage but is only used in the translation unit built from nInvaders.c.	handleGameOver	MISRA12_8.7	278	5		
+Function or object handleGameHighScore, has external linkage but is only used in the translation unit built from nInvaders.c.	handleGameHighScore	MISRA12_8.7	289	5		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+Function or object aliensRefresh, has external linkage but is only used in the translation unit built from view.c.	aliensRefresh	MISRA12_8.7	202	5		
+Function or object titleScreenDisplayTitleText, has external linkage but is only used in the translation unit built from view.c.	titleScreenDisplayTitleText	MISRA12_8.7	387	5		
+Function or object titleScreenDisplayAliensLocal, has external linkage but is only used in the translation unit built from view.c.	titleScreenDisplayAliensLocal	MISRA12_8.7	397	5		
+Function or object titleScreenDisplayWStartText, has external linkage but is only used in the translation unit built from view.c.	titleScreenDisplayWStartText	MISRA12_8.7	431	5		
+8.8 The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage - MISRA12_8.8 -- 8.8 (Global)(Required) The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage.						
+/home/gabriele/projects/unifi-nInvaders/globals.c						
+"C Function """"showGplSection1"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection1	MISRA12_8.8	115	5		
+"C Function """"showGplSection2"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection2	MISRA12_8.8	143	5		
+"C Function """"showGplSection3"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection3	MISRA12_8.8	170	5		
+"C Function """"showGplSection4"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection4	MISRA12_8.8	198	5		
+"C Function """"showGplSection5"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection5	MISRA12_8.8	226	5		
+"C Function """"showGplSection6"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection6	MISRA12_8.8	254	5		
+"C Function """"showGplSection7"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection7	MISRA12_8.8	282	5		
+"C Function """"showGplSection8"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection8	MISRA12_8.8	310	5		
+"C Function """"showGplSection9"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection9	MISRA12_8.8	338	5		
+"C Function """"showGplSection10"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection10	MISRA12_8.8	366	5		
+"C Function """"showGplSection11"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection11	MISRA12_8.8	394	5		
+"C Function """"showGplSection12"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection12	MISRA12_8.8	422	5		
+"C Function """"showGplSection13"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection13	MISRA12_8.8	450	5		
+"C Function """"showGplSection14"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection14	MISRA12_8.8	478	5		
+"C Function """"showGplSection15"""" appears to have internal linkage within globals.c, so static keyword should be used."	showGplSection15	MISRA12_8.8	506	5		
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+"C Function """"handleGameNextLevel"""" appears to have internal linkage within nInvaders.c, so static keyword should be used."	handleGameNextLevel	MISRA12_8.8	219	5		
+"C Function """"handleGameLoop"""" appears to have internal linkage within nInvaders.c, so static keyword should be used."	handleGameLoop	MISRA12_8.8	239	5		
+"C Function """"handleGameOver"""" appears to have internal linkage within nInvaders.c, so static keyword should be used."	handleGameOver	MISRA12_8.8	278	5		
+"C Function """"handleGameHighScore"""" appears to have internal linkage within nInvaders.c, so static keyword should be used."	handleGameHighScore	MISRA12_8.8	289	5		
+/home/gabriele/projects/unifi-nInvaders/view.c						
+"C Function """"titleScreenDisplayTitleText"""" appears to have internal linkage within view.c, so static keyword should be used."	titleScreenDisplayTitleText	MISRA12_8.8	387	5		
+"C Function """"titleScreenDisplayAliensLocal"""" appears to have internal linkage within view.c, so static keyword should be used."	titleScreenDisplayAliensLocal	MISRA12_8.8	397	5		
+"C Function """"titleScreenDisplayWStartText"""" appears to have internal linkage within view.c, so static keyword should be used."	titleScreenDisplayWStartText	MISRA12_8.8	431	5		
+Directive 4.6 typedefs that indicate size and signedness should be used in place of the basic numerical types - MISRA12_4.6 -- Directive 4.6 ( Advisory ) typedefs that indicate size and signedness should be used in place of the basic numerical types.						
+/home/gabriele/projects/unifi-nInvaders/nInvaders.c						
+"Violation: basic numerical type """"int"""" used."	endwin	MISRA12_4.6	98	8	Ignored	
+"Violation: basic numerical type """"int"""" used."	getch	MISRA12_4.6	196	7		
+"Violation: basic numerical type """"char"""" used in """"char **""""."	argv	MISRA12_4.6	355	34	Ignored	
+/home/gabriele/projects/unifi-nInvaders/nInvaders.h						
+"Violation: basic numerical type """"char"""" used in """"char **""""."	argv	MISRA12_4.6	33	34	Ignored	
